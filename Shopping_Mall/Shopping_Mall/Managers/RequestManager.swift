@@ -16,7 +16,7 @@ final class RequestManager: NSObject {
     private static let http_method = "POST"
     private static let userID = "MyMobileListTrade"
     private static let userSecret = "+*z16e3#_yhq112y_j#018z(dzyn5+vw(e@sofeiq5rh__u+6="
-//    private static var token = ""
+    //    private static var token = ""
     
     // MARK: - Get Token
     static func getToken(){
@@ -49,39 +49,44 @@ final class RequestManager: NSObject {
                 let userToken = try JSONDecoder().decode(TokenModel.self, from: data)
                 print("Token: \(userToken.token)")
                 UserDefaults.standard.set(userToken.token, forKey: "TOKEN")
-//                token = userToken.token
+                //                token = userToken.token
             }catch let jsonErr{
                 print(jsonErr)
             }
         }
         task.resume()
-//        return UserDefaults.standard.object(forKey: "savedToken") as! String
+        //        return UserDefaults.standard.object(forKey: "savedToken") as! String
     }
     
-    static func login(username: String, password: String, token: String)-> UserResponse{
-        var tempUser = UserResponse(id: 0, phoneNumber: "", firstName: "", lastName: JSONNull(), email: "", state: 0, country: 0, region: 0, city: 0, address: JSONNull(), rating: 0.0, balance: 0.0, avatar: JSONNull())
+    static func login(username: String, password: String, token: String){
+        
         guard let requestUrl = URL(string: baseUrl + loginUrl) else { fatalError() }
         print("RequestURL: ",requestUrl)
         var request = URLRequest(url:requestUrl)
         request.httpMethod = "POST"
-        let parameters = ["userName": username, "password": password] as [String : Any]
+        let parameters = ["userName": username, "password": password, "token": token] as [String : Any]
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {fatalError() }
         request.httpBody = httpBody
         URLSession.shared.dataTask(with: request) {data, response, error in
             guard let data = data else {return}
-            print("*_*_*_*_*_*",data)
+            print("*_*_*_*_*_*", data)
             do{
                 let decodedData = try JSONDecoder().decode(UserResponse.self, from: data)
-                tempUser = decodedData
-//                UserDefaults.standard.set(tempUser.firstName, forKey: "USER_NAME")
-                UserDefaults.standard.set(tempUser, forKey: "USER")
+                saveUser(user: decodedData)
+                print("User: ", decodedData.firstName)
             }catch let jsonErr{
                 print("Error\n", jsonErr)
             }
         }.resume()
-        print("User: ", tempUser)
-        return tempUser
     }
+    
+    static func saveUser(user:UserResponse){
+        UserDefaults.standard.set(user.id, forKey: "USER_ID")
+        UserDefaults.standard.set(user.phoneNumber, forKey: "USER_PHONENUMBER")
+        UserDefaults.standard.set(user.firstName, forKey: "USER_FIRSTNAME")
+        UserDefaults.standard.set(user.email, forKey: "USER_EMAIL")
+    }
+    
 }
