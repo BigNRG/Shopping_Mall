@@ -28,10 +28,11 @@ class HomeVC: UIViewController, ObservableObject {
     }
     
     @IBAction func loginButtonAction(_ sender: UIButton) {
-        let username = userNameTextField.text ?? ""
-        let password = passwordTextField.text ?? ""
-        let token = UserDefaults.standard.string(forKey: "TOKEN") ?? "no token"
-        RequestManager.login(username: username, password: password, token: token)        
+
+    }
+    
+    @IBAction func registerButtonAction(_ sender: UIButton) {
+
     }
 }
 
