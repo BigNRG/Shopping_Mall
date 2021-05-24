@@ -31,7 +31,7 @@ class RegisterVC: UIViewController, UIPickerViewDataSource {
         let email = emailTF.text ?? ""
         let password = passwordTF.text ?? ""
 
-        RequestManager.register(phoneNumber: phoneNumber, firstName: firsName, email: email, password: password, country: 1)
+        UserRequestManager.createUser(phoneNumber: phoneNumber, firstName: firsName, email: email, password: password, country: 1)
     }
 }
 extension RegisterVC: UIPickerViewDelegate {

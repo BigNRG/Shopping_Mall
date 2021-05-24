@@ -29,6 +29,7 @@ class ProductVC: UIViewController {
         productDescriptionLabel.text = loadedSingleSales[0].getSaleDescription
         productIDLabel.text = "ID: \(loadedSingleSales[0].id)"
     }
+    
     /*
     // MARK: - Navigation
 

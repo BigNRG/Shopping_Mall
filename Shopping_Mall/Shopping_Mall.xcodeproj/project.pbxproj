@@ -15,6 +15,21 @@
 		830B209626494E9F00803EF2 /* JsonDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830B209526494E9F00803EF2 /* JsonDataModels.swift */; };
 		830B209826494ED200803EF2 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830B209726494ED200803EF2 /* RequestManager.swift */; };
 		830B209B26494F0C00803EF2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830B209A26494F0C00803EF2 /* NetworkManager.swift */; };
+		834BBA00265A435900D5F162 /* ADDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BB9FF265A435900D5F162 /* ADDataModel.swift */; };
+		834BBA02265A437000D5F162 /* CategoriesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA01265A437000D5F162 /* CategoriesDataModel.swift */; };
+		834BBA04265A438100D5F162 /* GeneralDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA03265A438100D5F162 /* GeneralDataModel.swift */; };
+		834BBA06265A439600D5F162 /* IdentityDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA05265A439600D5F162 /* IdentityDataModel.swift */; };
+		834BBA08265A43A600D5F162 /* LocationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA07265A43A600D5F162 /* LocationDataModel.swift */; };
+		834BBA0A265A43B700D5F162 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA09265A43B700D5F162 /* UserDataModel.swift */; };
+		834BBA0C265A43CA00D5F162 /* VehicleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA0B265A43CA00D5F162 /* VehicleDataModel.swift */; };
+		834BBA0E265A48A200D5F162 /* AdRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA0D265A48A200D5F162 /* AdRequestManager.swift */; };
+		834BBA10265A48B300D5F162 /* CategoriesRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA0F265A48B300D5F162 /* CategoriesRequestManager.swift */; };
+		834BBA12265A48C300D5F162 /* GeneralRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA11265A48C300D5F162 /* GeneralRequestManager.swift */; };
+		834BBA14265A48E500D5F162 /* IdentityRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA13265A48E500D5F162 /* IdentityRequestManager.swift */; };
+		834BBA16265A48FE00D5F162 /* LocationRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA15265A48FE00D5F162 /* LocationRequestManager.swift */; };
+		834BBA18265A490D00D5F162 /* UserRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA17265A490D00D5F162 /* UserRequestManager.swift */; };
+		834BBA1A265A492300D5F162 /* VehicleRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA19265A492300D5F162 /* VehicleRequestManager.swift */; };
+		834BBA1C265C2EF200D5F162 /* AdGetRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BBA1B265C2EF200D5F162 /* AdGetRequestManager.swift */; };
 		8376801A264FE102005C7056 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83768019264FE102005C7056 /* CategoriesTableViewCell.swift */; };
 		8376801C264FE26E005C7056 /* CategoriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8376801B264FE26E005C7056 /* CategoriesTableVC.swift */; };
 		8376801E26505DCC005C7056 /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8376801D26505DCC005C7056 /* MessagesVC.swift */; };
@@ -44,6 +59,21 @@
 		830B209526494E9F00803EF2 /* JsonDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataModels.swift; sourceTree = "<group>"; };
 		830B209726494ED200803EF2 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		830B209A26494F0C00803EF2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		834BB9FF265A435900D5F162 /* ADDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDataModel.swift; sourceTree = "<group>"; };
+		834BBA01265A437000D5F162 /* CategoriesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDataModel.swift; sourceTree = "<group>"; };
+		834BBA03265A438100D5F162 /* GeneralDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralDataModel.swift; sourceTree = "<group>"; };
+		834BBA05265A439600D5F162 /* IdentityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityDataModel.swift; sourceTree = "<group>"; };
+		834BBA07265A43A600D5F162 /* LocationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataModel.swift; sourceTree = "<group>"; };
+		834BBA09265A43B700D5F162 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		834BBA0B265A43CA00D5F162 /* VehicleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDataModel.swift; sourceTree = "<group>"; };
+		834BBA0D265A48A200D5F162 /* AdRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdRequestManager.swift; sourceTree = "<group>"; };
+		834BBA0F265A48B300D5F162 /* CategoriesRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRequestManager.swift; sourceTree = "<group>"; };
+		834BBA11265A48C300D5F162 /* GeneralRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRequestManager.swift; sourceTree = "<group>"; };
+		834BBA13265A48E500D5F162 /* IdentityRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityRequestManager.swift; sourceTree = "<group>"; };
+		834BBA15265A48FE00D5F162 /* LocationRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestManager.swift; sourceTree = "<group>"; };
+		834BBA17265A490D00D5F162 /* UserRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestManager.swift; sourceTree = "<group>"; };
+		834BBA19265A492300D5F162 /* VehicleRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRequestManager.swift; sourceTree = "<group>"; };
+		834BBA1B265C2EF200D5F162 /* AdGetRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdGetRequestManager.swift; sourceTree = "<group>"; };
 		83768019264FE102005C7056 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		8376801B264FE26E005C7056 /* CategoriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableVC.swift; sourceTree = "<group>"; };
 		8376801D26505DCC005C7056 /* MessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
@@ -109,7 +139,14 @@
 		830B209326494E7800803EF2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				834BB9FF265A435900D5F162 /* ADDataModel.swift */,
+				834BBA01265A437000D5F162 /* CategoriesDataModel.swift */,
+				834BBA03265A438100D5F162 /* GeneralDataModel.swift */,
+				834BBA05265A439600D5F162 /* IdentityDataModel.swift */,
 				830B209526494E9F00803EF2 /* JsonDataModels.swift */,
+				834BBA07265A43A600D5F162 /* LocationDataModel.swift */,
+				834BBA09265A43B700D5F162 /* UserDataModel.swift */,
+				834BBA0B265A43CA00D5F162 /* VehicleDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,8 +154,16 @@
 		830B209426494E8700803EF2 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				830B209726494ED200803EF2 /* RequestManager.swift */,
+				834BBA1B265C2EF200D5F162 /* AdGetRequestManager.swift */,
+				834BBA0D265A48A200D5F162 /* AdRequestManager.swift */,
+				834BBA0F265A48B300D5F162 /* CategoriesRequestManager.swift */,
+				834BBA11265A48C300D5F162 /* GeneralRequestManager.swift */,
+				834BBA13265A48E500D5F162 /* IdentityRequestManager.swift */,
+				834BBA15265A48FE00D5F162 /* LocationRequestManager.swift */,
 				830B209A26494F0C00803EF2 /* NetworkManager.swift */,
+				830B209726494ED200803EF2 /* RequestManager.swift */,
+				834BBA17265A490D00D5F162 /* UserRequestManager.swift */,
+				834BBA19265A492300D5F162 /* VehicleRequestManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -296,25 +341,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				838AFA90264A70800095F4B0 /* UserPageVC.swift in Sources */,
+				834BBA02265A437000D5F162 /* CategoriesDataModel.swift in Sources */,
+				834BBA12265A48C300D5F162 /* GeneralRequestManager.swift in Sources */,
 				8376801E26505DCC005C7056 /* MessagesVC.swift in Sources */,
+				834BBA10265A48B300D5F162 /* CategoriesRequestManager.swift in Sources */,
+				834BBA14265A48E500D5F162 /* IdentityRequestManager.swift in Sources */,
 				8376802026516310005C7056 /* SubCategoriesTableVC.swift in Sources */,
 				8376803226526682005C7056 /* LoginVC.swift in Sources */,
 				830B209B26494F0C00803EF2 /* NetworkManager.swift in Sources */,
+				834BBA1A265A492300D5F162 /* VehicleRequestManager.swift in Sources */,
 				8376802A26525AA3005C7056 /* RoundedShadowView.swift in Sources */,
 				838AFA8E26496FE70095F4B0 /* HomeVC.swift in Sources */,
+				834BBA0C265A43CA00D5F162 /* VehicleDataModel.swift in Sources */,
+				834BBA08265A43A600D5F162 /* LocationDataModel.swift in Sources */,
 				830B209826494ED200803EF2 /* RequestManager.swift in Sources */,
 				837680282651AEB5005C7056 /* ProductsTableViewCell.swift in Sources */,
 				8376803326526682005C7056 /* RegisterVC.swift in Sources */,
 				8376802F26526651005C7056 /* ConfirmEmailVC.swift in Sources */,
 				830B208026494B5F00803EF2 /* AppDelegate.swift in Sources */,
+				834BBA18265A490D00D5F162 /* UserRequestManager.swift in Sources */,
 				8376801C264FE26E005C7056 /* CategoriesTableVC.swift in Sources */,
+				834BBA1C265C2EF200D5F162 /* AdGetRequestManager.swift in Sources */,
 				8376802C26525B35005C7056 /* ProductVC.swift in Sources */,
 				830B208226494B5F00803EF2 /* SceneDelegate.swift in Sources */,
+				834BBA16265A48FE00D5F162 /* LocationRequestManager.swift in Sources */,
 				830B209626494E9F00803EF2 /* JsonDataModels.swift in Sources */,
 				838AFA8426496EC70095F4B0 /* CustomExtensions.swift in Sources */,
+				834BBA04265A438100D5F162 /* GeneralDataModel.swift in Sources */,
 				8376801A264FE102005C7056 /* CategoriesTableViewCell.swift in Sources */,
 				8376803626526A36005C7056 /* TabBarController.swift in Sources */,
 				8376802226516329005C7056 /* SubCategoriesTableViewCell.swift in Sources */,
+				834BBA00265A435900D5F162 /* ADDataModel.swift in Sources */,
+				834BBA0A265A43B700D5F162 /* UserDataModel.swift in Sources */,
+				834BBA0E265A48A200D5F162 /* AdRequestManager.swift in Sources */,
+				834BBA06265A439600D5F162 /* IdentityDataModel.swift in Sources */,
 				837680262651AE9E005C7056 /* ProductsTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

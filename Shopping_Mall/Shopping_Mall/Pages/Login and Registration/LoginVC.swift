@@ -32,7 +32,7 @@ class LoginVC: UIViewController {
         let username = userNameTF.text ?? ""
         let password = passwordTF.text ?? ""
 
-        RequestManager.login(userName: username, password: password, token: "fbToken") { loginedUser in
+        IdentityRequestManager.login(userName: username, password: password, token: "fbToken") { loginedUser in
 //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarVC_ID") as! TabBarController
 ////            vc.loadedSales = loginedUser ?? []
 //            self.navigationController?.pushViewController(vc, animated: true)

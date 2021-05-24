@@ -23,7 +23,7 @@ class CategoriesTableVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.title = "Կատեգորիաներ"//LocalizableManager.getLocalizable(key: "Home")
-        RequestManager.loadMainCategories(){ [weak self] loadedCategories in
+        CategoriesRequestManager.loadMainCategories(){ [weak self] loadedCategories in
             self?.categories = loadedCategories ?? []
             self?.tableView.reloadData()
         }
@@ -44,10 +44,11 @@ class CategoriesTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        RequestManager.loadSubCategories(id: indexPath.row + 1 , selectedCategoryName: categories[indexPath.row].category){ loadedSubCategories in
+        CategoriesRequestManager.loadSubCategories(id: indexPath.row + 1 , selectedCategoryName: categories[indexPath.row].category){ loadedSubCategories in
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "SubCategoriesTableVC_ID") as! SubCategoriesTableVC
             vc.subcategoryTitle = self.categories[indexPath.row].category
             vc.subCategories = loadedSubCategories ?? []
+            print("CategoryID: ", self.categories[indexPath.row].id)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

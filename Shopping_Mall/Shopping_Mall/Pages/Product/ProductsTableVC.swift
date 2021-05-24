@@ -44,7 +44,7 @@ class ProductsTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        RequestManager.loadSalesSingle(id: loadedSales[indexPath.row].id) {loadedSingleSalesData in
+        AdRequestManager.loadSingleSale(id: loadedSales[indexPath.row].id) {loadedSingleSalesData in
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProductVC_ID") as! ProductVC
             vc.loadedSingleSales = loadedSingleSalesData ?? []
             self.navigationController?.pushViewController(vc, animated: true)

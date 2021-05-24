@@ -35,7 +35,7 @@ class ConfirmEmailVC: UIViewController {
         alertController.addAction(UIAlertAction(title: "Հաստատել", style: .default, handler: { [weak self] (_) in
             let textField = alertController.textFields![0]
             print("Text field: \(String(describing: textField.text))")
-            RequestManager.sendConfirmEmail(email: email, token: textField.text!)
+            UserRequestManager.sendConfirmEmail(email: email, token: textField.text!)
         }))
         self.present(alertController, animated: true, completion: nil)
     }

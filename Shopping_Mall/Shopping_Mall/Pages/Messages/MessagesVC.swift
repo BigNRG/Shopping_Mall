@@ -11,7 +11,7 @@ class MessagesVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        RequestManager.loadMainPage()
+        GeneralRequestManager.loadMainPage()
         // Do any additional setup after loading the view.
     }
     
