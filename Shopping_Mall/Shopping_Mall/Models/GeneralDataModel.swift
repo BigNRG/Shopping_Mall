@@ -16,7 +16,7 @@ struct MainPage: Codable {
 
 // MARK: - AdsWithCategory
 struct AdsWithCategory: Codable {
-    let category: Category
+    let category: AdsCategory
     let ads: [Ad]
 }
 
@@ -25,10 +25,10 @@ struct Ad: Codable {
     let id: Int
     let name: String
     let userID: Int
-    let adDescription: Description
+    let adDescription: String
     let image: String
     let owner: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case id, name, userID
         case adDescription = "description"
@@ -36,10 +36,15 @@ struct Ad: Codable {
     }
 }
 
-enum Description: String, Codable {
-    case appilances = "appilances"
-    case asdjadkjhdkjasmcxjknsZdjkalsnd = "asdjadkjhdkjasmcxjkns,zdjkalsnd"
-    case string = "string"
+// MARK: - AdsCategory
+struct AdsCategory: Codable {
+    let id: Int
+    let name: String
 }
 
-
+// MARK: - BestExchange
+struct BestExchange: Codable {
+    let sale, buy: Int
+    let symbol: String
+    let userID, adID: Int
+}

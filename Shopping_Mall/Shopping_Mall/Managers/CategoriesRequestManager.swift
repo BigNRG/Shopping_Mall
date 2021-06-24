@@ -27,7 +27,7 @@ final class CategoriesRequestManager: NSObject {
             let resp = response as! HTTPURLResponse
             guard let data = data else {return}
             do{
-                print("Response Status code: ",resp.statusCode)
+                print("Load MainCategories Response Status code: ",resp.statusCode)
                 let decodedData = try? JSONDecoder().decode(MainCategories.self, from: data)
                 if let result = decodedData{
                     DispatchQueue.main.async {
@@ -60,7 +60,7 @@ final class CategoriesRequestManager: NSObject {
             let resp = response as! HTTPURLResponse
             guard let data = data else {return}
             do{
-                print("Response Status code: ",resp.statusCode)
+                print("Load SubCategories Response Status code: ",resp.statusCode)
                 let decodedData = try? JSONDecoder().decode(SubCategories.self, from: data)
                 if let result = decodedData{
                     DispatchQueue.main.async {

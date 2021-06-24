@@ -69,7 +69,7 @@ final class IdentityRequestManager: NSObject {
             let resp = response as! HTTPURLResponse
             guard let data = data else {return}
             do{
-                print("Response Status code: ",resp.statusCode)
+                print("Login Response Status code: ",resp.statusCode)
                 let decodedData = try? JSONDecoder().decode(UserModel.self, from: data)
                 if let result = decodedData{
                     DispatchQueue.main.async {

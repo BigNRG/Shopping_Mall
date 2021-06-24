@@ -9,7 +9,6 @@ import UIKit
 
 class ProductsTableVC: UITableViewController {
     var loadedSales = GetSale()
-    var loadedSingleSales = GetSale()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,11 +43,13 @@ class ProductsTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        AdRequestManager.loadSingleSale(id: loadedSales[indexPath.row].id) {loadedSingleSalesData in
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProductVC_ID") as! ProductVC
+        
+        AdGetRequestManager.loadSingleSale(id: loadedSales[indexPath.row].id) { [weak self] loadedSingleSalesData in
+            let vc = self?.storyboard?.instantiateViewController(withIdentifier: "ProductVC_ID") as! ProductVC
             vc.loadedSingleSales = loadedSingleSalesData ?? []
-            self.navigationController?.pushViewController(vc, animated: true)
+            self?.navigationController?.pushViewController(vc, animated: true)
         }
+       
     }
     /*
     // Override to support conditional editing of the table view.

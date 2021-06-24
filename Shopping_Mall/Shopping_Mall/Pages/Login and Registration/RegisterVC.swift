@@ -19,6 +19,7 @@ class RegisterVC: UIViewController, UIPickerViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
 
         self.pickerView.dataSource = self
         self.pickerView.delegate = self

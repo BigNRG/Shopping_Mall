@@ -41,3 +41,52 @@ public extension UIViewController {
         view.endEditing(true)
     }
 }
+
+// MARK: - Image to Base64
+public enum ImageFormat {
+    case png
+    case jpeg(CGFloat)
+}
+
+extension UIImage {
+    public func toBase64(format: ImageFormat) -> String? {
+        var imageData: Data?
+
+        switch format {
+        case .png:
+            imageData = self.pngData()
+        case .jpeg(let compression):
+            imageData = self.jpegData(compressionQuality: compression)
+        }
+
+        return imageData?.base64EncodedString()
+    }
+}
+
+
+// MARK: - Download Image from URL
+extension UIImageView {
+    func downloadImageFromURL(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
+
+// MARK: - Custom Shadow View
+public extension UIView {
+    func shadowMyView() {
+        layer.shadowRadius = 5
+        layer.shadowColor = #colorLiteral(red: 0.9087892771, green: 0.9089416862, blue: 0.9087691903, alpha: 1)
+        layer.shadowOffset = CGSize(width: 0, height: 1)
+        layer.shadowOpacity = 0.8
+        layer.masksToBounds = false
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
+    }
+}

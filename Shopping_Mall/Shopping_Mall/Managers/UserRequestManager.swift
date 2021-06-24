@@ -26,7 +26,7 @@ final class UserRequestManager: NSObject {
         var request=URLRequest(url:url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue(TEMP_TOKEN, forHTTPHeaderField: "Authorization")
+        request.addValue(RequestManager.tempToken, forHTTPHeaderField: "Authorization")
         let parameters = ["phoneNumber": phoneNumber, "firstName": firstName, "email": email, "password": password, "country": country] as [String : Any]
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {fatalError() }
         request.httpBody = httpBody
@@ -34,7 +34,7 @@ final class UserRequestManager: NSObject {
             let resp = response as! HTTPURLResponse
             guard let data = data else {return}
             do{
-                print("Response Status code: ",resp.statusCode)
+                print("Create User Response Status code: ",resp.statusCode)
                 let decodedData = try? JSONDecoder().decode(CreateUserModel.self, from: data)
                 if let result = decodedData{
                     DispatchQueue.main.async {
@@ -57,7 +57,7 @@ final class UserRequestManager: NSObject {
         var request=URLRequest(url:url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.addValue(RequestManager.tempToken, forHTTPHeaderField: "Authorization")
         let parameters = ["email": email, "token": "token"] as [String : Any]
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {fatalError() }
         request.httpBody = httpBody
@@ -65,7 +65,7 @@ final class UserRequestManager: NSObject {
             let resp = response as! HTTPURLResponse
             guard let data = data else {return}
             do{
-                print("Response Status code: ",resp.statusCode)
+                print("Send Confirm Email Response Status code: ",resp.statusCode)
                 let decodedData = try? JSONDecoder().decode(SendConfirmEmail.self, from: data)
                 if let result = decodedData{
                     DispatchQueue.main.async {

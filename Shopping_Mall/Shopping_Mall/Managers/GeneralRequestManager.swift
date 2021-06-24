@@ -12,29 +12,32 @@ final class GeneralRequestManager: NSObject {
     private static let MAIN_PAGE_URL = "General/MainPage"
     
     // MARK: - Get MainPage
-    static func loadMainPage() {
-        guard  let url = URL(string: RequestManager.baseURL + MAIN_PAGE_URL) else {return}
-        var request=URLRequest(url:url)
+    static func loadMainPage(completion: @escaping (MainPage?) -> Void) {
+        guard let requestUrl = URL(string: RequestManager.baseURL + MAIN_PAGE_URL) else {return}
+        var request=URLRequest(url:requestUrl)
+        print("RequestURL: ",requestUrl)
         request.httpMethod = "GET"
         
-        request.addValue("culture", forHTTPHeaderField: "AM")
         request.addValue("countryID", forHTTPHeaderField: "1")
+        request.addValue("culture", forHTTPHeaderField: "AM")
         request.addValue("currency", forHTTPHeaderField: "1")
         
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue(RequestManager.contentType, forHTTPHeaderField: "Content-Type")
         request.addValue(RequestManager.tempToken, forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: request) {data, response, error in
             let resp = response as! HTTPURLResponse
             guard let data = data else {return}
             do{
-                print("Response Status code: ",resp.statusCode)
+                print("Load Main Page Response Status code: ",resp.statusCode)
                 let decodedData = try? JSONDecoder().decode(MainPage.self, from: data)
                 if let result = decodedData{
                     DispatchQueue.main.async {
-                        print(result.adsWithCategories[0].category.name)
+                        completion(result)
+                        print("MainPageCategory: ", result.adsWithCategories[0].category.name)
                     }
                 } else {DispatchQueue.main.async {
+                    completion(nil)
                 }
                 
                 }

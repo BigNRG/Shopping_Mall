@@ -8,11 +8,10 @@
 import UIKit
 
 class CategoriesTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var categoryNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,5 +19,7 @@ class CategoriesTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+//    override func prepareForReuse() {
+//        <#code#>
+//    }
 }

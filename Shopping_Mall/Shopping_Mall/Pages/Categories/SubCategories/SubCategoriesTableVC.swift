@@ -45,7 +45,7 @@ class SubCategoriesTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let subcategoryid = subCategories[indexPath.row].id
-        AdRequestManager.loadSales(pageNumber: 1, adCount: 20, subCategoryID: 1) { loadedSalesData in
+        AdGetRequestManager.loadSales(pageNumber: 1, adCount: 20, subCategoryID: 1) { loadedSalesData in
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProductsTableVC_ID") as! ProductsTableVC
             vc.loadedSales = loadedSalesData ?? []
             print("SubCategoryID: ", self.subCategories[indexPath.row].id)

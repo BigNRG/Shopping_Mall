@@ -9,34 +9,16 @@ import Foundation
 import UIKit
 
 final class RequestManager: NSObject {
-    private static let BASE_URL = "http://tradelist3-001-site1.itempurl.com/api/"
+    //old url http://tradelist3-001-site1.itempurl.com/api/
+    private static let BASE_URL = "http://mallarmenia-001-site1.itempurl.com/api/"
+    
     private static let CONTENT_TYPE = "application/json"
     private static let HTTP_METHOD = "POST"
     
-    private static let TEMP_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzcxMDI3MjQsImlzcyI6Imh0dHA6Ly90cmFkZWxpc3QyLTAwMS1zaXRlMS5pdGVtcHVybC5jb20vIiwiYXVkIjoiTGlzdFRyYWRlIn0.L7-rCwyPoJePWknAThceJwxF16Dh7RMFi3_4hTlY_eI"
+    private static let TEMP_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzkwNDEzMjMsImlzcyI6Imh0dHA6Ly90cmFkZWxpc3QyLTAwMS1zaXRlMS5pdGVtcHVybC5jb20vIiwiYXVkIjoiTGlzdFRyYWRlIn0.Fv8nM0C-NxQGLGQtucbpmSERbV_jb_lp80fI2tue63U"
     
     //getters
-//    static func baseURL()->String{
-//        let baseURL = self.BASE_URL
-//        return baseURL
-//    }
-//
-//
-//
-//    static func tempToken()->String{
-//        let token = self.TEMP_TOKEN
-//        return token
-//    }
-//
-//    static func contentType()->String{
-//        let contentType = self.CONTENT_TYPE
-//        return contentType
-//    }
-//
-//    static func httpMethod()->String{
-//        let httpMethod = self.HTTP_METHOD
-//        return httpMethod
-//    }
+
     static var baseURL:String{
         return self.BASE_URL
     }
@@ -49,5 +31,4 @@ final class RequestManager: NSObject {
     static var httpMethod:String{
         return self.HTTP_METHOD
     }
-    
 }
