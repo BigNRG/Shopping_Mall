@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZBX-1V-YXG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kaM-vp-2Nv">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -2596,10 +2596,10 @@
                                 <rect key="frame" x="0.0" y="44" width="390" height="717"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awB-nM-e1y" userLabel="InternalView">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1947.3333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1944.6666666666667"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2X3-pp-gcw">
-                                                <rect key="frame" x="0.0" y="0.0" width="390" height="1927.3333333333333"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="1924.6666666666667"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82a-Ty-L2e" userLabel="Aim">
                                                         <rect key="frame" x="0.0" y="0.0" width="390" height="187.33333333333334"/>
@@ -2753,7 +2753,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rlb-iK-Hmv" userLabel="Currency and Price">
                                                         <rect key="frame" x="0.0" y="570.66666666666663" width="390" height="187"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPk-A5-iqa" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPk-A5-iqa" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="5" width="380" height="88"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UuR-7E-5bz">
@@ -2809,7 +2809,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ei8-ZK-vpR" userLabel="Name and Tags">
                                                         <rect key="frame" x="0.0" y="760.66666666666663" width="390" height="187.33333333333337"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gY-gN-EbX" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gY-gN-EbX" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="5" width="380" height="132"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1cx-n1-WU0">
@@ -2855,10 +2855,10 @@
                                                         <rect key="frame" x="0.0" y="951" width="390" height="124.66666666666674"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ERW-UQ-quI" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
-                                                                <rect key="frame" x="5" y="5" width="380" height="4644868"/>
+                                                                <rect key="frame" x="5" y="5" width="380" height="28032"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-zK-TDD">
-                                                                        <rect key="frame" x="5" y="5" width="370" height="4644858"/>
+                                                                        <rect key="frame" x="5" y="5" width="370" height="28022"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tf-XN-eLN">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="370" height="34"/>
@@ -2870,7 +2870,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ER4-oh-7x4">
-                                                                                <rect key="frame" x="0.0" y="44" width="370" height="4644814"/>
+                                                                                <rect key="frame" x="0.0" y="44" width="370" height="27978"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                                 <color key="textColor" systemColor="labelColor"/>
@@ -2938,16 +2938,16 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAN-8e-k2s" userLabel="Images">
-                                                        <rect key="frame" x="0.0" y="1269" width="390" height="87.666666666666742"/>
+                                                        <rect key="frame" x="0.0" y="1269" width="390" height="85"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8JN-Q0-wdK" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
-                                                                <rect key="frame" x="5" y="5" width="380" height="611466"/>
+                                                                <rect key="frame" x="5" y="5" width="380" height="10000"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u5R-qR-J8V">
-                                                                        <rect key="frame" x="5" y="5" width="370" height="611442.33333333337"/>
+                                                                        <rect key="frame" x="5" y="5" width="370" height="10044"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwc-mM-yDV">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="370" height="20.333333333333332"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="370" height="34"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="dSH-YG-Kuu"/>
                                                                                 </constraints>
@@ -2956,7 +2956,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fp8-zc-Ugy">
-                                                                                <rect key="frame" x="0.0" y="30.333333333313931" width="370" height="611412"/>
+                                                                                <rect key="frame" x="0.0" y="44" width="370" height="10000"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="k7E-zr-gdr">
                                                                                     <size key="itemSize" width="70" height="70"/>
@@ -2988,7 +2988,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eA1-LB-Umd" userLabel="Space">
-                                                        <rect key="frame" x="0.0" y="1359.6666666666667" width="390" height="187.33333333333326"/>
+                                                        <rect key="frame" x="0.0" y="1357" width="390" height="187.33333333333326"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnE-AE-rBX" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="5" width="380" height="88"/>
@@ -3028,9 +3028,9 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ct-Xu-1vp" userLabel="FloorRoomsConsType">
-                                                        <rect key="frame" x="0.0" y="1550" width="390" height="187"/>
+                                                        <rect key="frame" x="0.0" y="1547.3333333333333" width="390" height="187"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYh-CO-LmM" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYh-CO-LmM" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="5" width="380" height="88"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nuw-VA-1Xr">
@@ -3108,7 +3108,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRA-fy-dRC" userLabel="Product State">
-                                                        <rect key="frame" x="0.0" y="1740" width="390" height="187.33333333333326"/>
+                                                        <rect key="frame" x="0.0" y="1737.3333333333333" width="390" height="187.33333333333326"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3H3-cV-uQ0" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="5" width="380" height="88"/>
@@ -3296,7 +3296,7 @@
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N9I-sP-OXf" userLabel="Aim">
                                                         <rect key="frame" x="0.0" y="0.0" width="390" height="186"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cym-FU-nqZ" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cym-FU-nqZ" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="5" width="380" height="88"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="900-Nk-9dm">
@@ -3376,7 +3376,7 @@
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R9L-JK-wkd" userLabel="Location">
                                                         <rect key="frame" x="0.0" y="378" width="390" height="186"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GFq-WJ-MEp" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFq-WJ-MEp" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="5" width="380" height="308"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8mN-Op-zA2">
@@ -3547,10 +3547,10 @@
                                                         <rect key="frame" x="0.0" y="945" width="390" height="186"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqO-HD-q30" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
-                                                                <rect key="frame" x="5" y="5" width="380" height="11184820.666666666"/>
+                                                                <rect key="frame" x="5" y="5" width="380" height="28032"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="haE-pS-ppZ">
-                                                                        <rect key="frame" x="5" y="5" width="370" height="11184810.666666666"/>
+                                                                        <rect key="frame" x="5" y="5" width="370" height="28022"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmF-s3-PTP">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="370" height="34"/>
@@ -3562,7 +3562,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LPR-9p-XFr">
-                                                                                <rect key="frame" x="0.0" y="44" width="370" height="11184766.666666666"/>
+                                                                                <rect key="frame" x="0.0" y="44" width="370" height="27978"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                                 <color key="textColor" systemColor="labelColor"/>
@@ -3632,11 +3632,11 @@
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ns4-DO-1P4" userLabel="Images">
                                                         <rect key="frame" x="0.0" y="1323" width="390" height="186"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pun-Qy-tqk" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
-                                                                <rect key="frame" x="5" y="5" width="380" height="4644868"/>
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pun-Qy-tqk" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
+                                                                <rect key="frame" x="5" y="5" width="380" height="10000"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U9T-pp-FEc">
-                                                                        <rect key="frame" x="5" y="5" width="370" height="4644858"/>
+                                                                        <rect key="frame" x="5" y="5" width="370" height="16772"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTN-Rs-iY5">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="370" height="34"/>
@@ -3648,7 +3648,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T7F-1e-7AL">
-                                                                                <rect key="frame" x="0.0" y="44" width="370" height="4644814"/>
+                                                                                <rect key="frame" x="0.0" y="44" width="370" height="16728"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gVp-Ma-cDA">
                                                                                     <size key="itemSize" width="70" height="70"/>
@@ -3752,7 +3752,7 @@
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cg0-gg-7bZ" userLabel="Product State">
                                                         <rect key="frame" x="0.0" y="1512" width="390" height="186"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSU-T0-YJ2" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSU-T0-YJ2" customClass="RoundedShadowView" customModule="Shopping_Mall" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="5" width="380" height="88"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tMv-uk-8s5">
