@@ -7,32 +7,49 @@
 
 import UIKit
 
-class HomeVC: UIViewController, ObservableObject {
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+class HomeVC: UIViewController {
+    private var adsWithCategories = [AdsWithCategory]()
     
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var mainPageTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         transparentNavigationBar()
-        loginButton.roundedButton()
+        topView.shadowMyView()
+        searchBar.backgroundImage = UIImage()
         hideKeyboardWhenTappedAround()
-        if !NetworkManager.monitorNetwork() {
-            loginButton.isEnabled = false
-        }
-        else {
-            //            RequestManager.getToken()
-            //            guard let savedToken = UserDefaults.standard.string(forKey: "savedToken") else {return}
+        GeneralRequestManager.loadMainPage { [weak self] loadedMainPage in
+            self?.adsWithCategories = loadedMainPage?.adsWithCategories ?? []
+            self?.mainPageTableView.reloadData()
         }
     }
     
-    @IBAction func loginButtonAction(_ sender: UIButton) {
-        let username = userNameTextField.text ?? ""
-        let password = passwordTextField.text ?? ""
-        let token = UserDefaults.standard.string(forKey: "TOKEN") ?? "no token"
-        RequestManager.login(username: username, password: password, token: token)        
-    }
 }
 
+extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return adsWithCategories.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryAdsTableViewCell", for: indexPath) as! CategoryAdsTableViewCell
+        //on product press closure
+        cell.onProductPress = { (selectedProductIndex) in
+            print("Selected Product: ", selectedProductIndex, "from section: ", indexPath.section)
+        }
+        cell.ads = adsWithCategories[indexPath.section].ads
+        return cell
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return adsWithCategories[section].category.name
+    }
+    
+    
+}
 

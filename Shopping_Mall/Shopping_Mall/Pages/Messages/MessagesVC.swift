@@ -1,5 +1,5 @@
 //
-//  CategoriesVC.swift
+//  MessagesVC.swift
 //  Shopping_Mall
 //
 //  Created by Norayr Grigoryan on 5/15/21.
@@ -7,11 +7,10 @@
 
 import UIKit
 
-class CategoriesVC: UIViewController {
+class MessagesVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
