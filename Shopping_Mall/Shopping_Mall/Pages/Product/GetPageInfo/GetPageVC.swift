@@ -107,6 +107,7 @@ extension GetPageVC: UITableViewDataSource {
                 return cell
             case 5:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell6", for: indexPath) as! TableViewCell
+                //cell.setInfo(<#T##info: [(String, String)]##[(String, String)]#>) //by Artur
                 return cell
             case 6:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell7", for: indexPath) as! TableViewCell

@@ -53,6 +53,7 @@
 		838AFA8E26496FE70095F4B0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AFA8D26496FE70095F4B0 /* HomeVC.swift */; };
 		838AFA90264A70800095F4B0 /* UserPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838AFA8F264A70800095F4B0 /* UserPageVC.swift */; };
 		838DAD67267B9FB4000B8DF4 /* AddRealEstateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DAD66267B9FB4000B8DF4 /* AddRealEstateVC.swift */; };
+		839BAE4C268B02380022B956 /* AddArrayModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839BAE4B268B02380022B956 /* AddArrayModels.swift */; };
 		839D8BB626715B71002A1549 /* GetPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D8BB526715B71002A1549 /* GetPageVC.swift */; };
 		839D8BB826715BA5002A1549 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D8BB726715BA5002A1549 /* TableViewCell.swift */; };
 		839D8BBA26715BC8002A1549 /* TableViewCell_Inside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D8BB926715BC8002A1549 /* TableViewCell_Inside.swift */; };
@@ -60,7 +61,6 @@
 		83C4DB24266A2F2900D08601 /* AddCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4DB23266A2F2900D08601 /* AddCategoriesTableViewCell.swift */; };
 		83C4DB26266A2F4100D08601 /* AddSubCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4DB25266A2F4100D08601 /* AddSubCategoriesTableViewCell.swift */; };
 		83C4DB28266A2F5600D08601 /* AddSubCategoriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C4DB27266A2F5600D08601 /* AddSubCategoriesTableVC.swift */; };
-		83D8ADAE2683653A002CB3CD /* AddApplianceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8ADAD2683653A002CB3CD /* AddApplianceVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +113,7 @@
 		838AFA8D26496FE70095F4B0 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		838AFA8F264A70800095F4B0 /* UserPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageVC.swift; sourceTree = "<group>"; };
 		838DAD66267B9FB4000B8DF4 /* AddRealEstateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRealEstateVC.swift; sourceTree = "<group>"; };
+		839BAE4B268B02380022B956 /* AddArrayModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArrayModels.swift; sourceTree = "<group>"; };
 		839D8BB526715B71002A1549 /* GetPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPageVC.swift; sourceTree = "<group>"; };
 		839D8BB726715BA5002A1549 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		839D8BB926715BC8002A1549 /* TableViewCell_Inside.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell_Inside.swift; sourceTree = "<group>"; };
@@ -120,7 +121,6 @@
 		83C4DB23266A2F2900D08601 /* AddCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		83C4DB25266A2F4100D08601 /* AddSubCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		83C4DB27266A2F5600D08601 /* AddSubCategoriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubCategoriesTableVC.swift; sourceTree = "<group>"; };
-		83D8ADAD2683653A002CB3CD /* AddApplianceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddApplianceVC.swift; sourceTree = "<group>"; };
 		9FAA2C4F82186C39671D7DF7 /* Pods-Shopping_Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping_Mall.debug.xcconfig"; path = "Target Support Files/Pods-Shopping_Mall/Pods-Shopping_Mall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +200,7 @@
 				834BBA07265A43A600D5F162 /* LocationDataModel.swift */,
 				834BBA09265A43B700D5F162 /* UserDataModel.swift */,
 				834BBA0B265A43CA00D5F162 /* VehicleDataModel.swift */,
+				839BAE4B268B02380022B956 /* AddArrayModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -342,7 +343,6 @@
 			isa = PBXGroup;
 			children = (
 				8304130826696814007047ED /* AddVC.swift */,
-				83D8ADAC2683645F002CB3CD /* Appliance */,
 				83144B37266AB3BE0022CDD8 /* AddCategories */,
 				83144B38266AB3C90022CDD8 /* AddSubCategories */,
 				839D8BB3266D1EE5002A1549 /* RealEstate */,
@@ -382,14 +382,6 @@
 				839D8BB926715BC8002A1549 /* TableViewCell_Inside.swift */,
 			);
 			path = GetPageInfo;
-			sourceTree = "<group>";
-		};
-		83D8ADAC2683645F002CB3CD /* Appliance */ = {
-			isa = PBXGroup;
-			children = (
-				83D8ADAD2683653A002CB3CD /* AddApplianceVC.swift */,
-			);
-			path = Appliance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,8 +498,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83D8ADAE2683653A002CB3CD /* AddApplianceVC.swift in Sources */,
 				838AFA90264A70800095F4B0 /* UserPageVC.swift in Sources */,
+				839BAE4C268B02380022B956 /* AddArrayModels.swift in Sources */,
 				833AEBB12667B822007BEA80 /* AdDataModel.swift in Sources */,
 				83144B3B266AB4260022CDD8 /* UploadImageCollectionViewCell.swift in Sources */,
 				839D8BBA26715BC8002A1549 /* TableViewCell_Inside.swift in Sources */,

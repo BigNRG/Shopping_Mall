@@ -32,7 +32,7 @@ final class CategoriesRequestManager: NSObject {
                 if let result = decodedData{
                     DispatchQueue.main.async {
                         completion(result)
-                        print("Category: ", result[0].category)
+                        print("Loaded Category Count: ", result.count)
                     }
                 } else {DispatchQueue.main.async {
                     completion(nil)
@@ -65,7 +65,7 @@ final class CategoriesRequestManager: NSObject {
                 if let result = decodedData{
                     DispatchQueue.main.async {
                         completion(result)
-                        print("SubCategtory", result[0].type)
+                        print("Loaded SubCategory Count: ", result.count)
                     }
                 } else {DispatchQueue.main.async {
                     completion(nil)

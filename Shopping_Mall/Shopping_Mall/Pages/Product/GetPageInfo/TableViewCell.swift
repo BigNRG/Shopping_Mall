@@ -9,6 +9,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
+    private var info: [(String, String)] = [] // by Artur
     
         let number = "094231323"
     
@@ -124,17 +125,24 @@ class TableViewCell: UITableViewCell {
         img.image = image
     }
     
+    func setInfo(_ info: [(String, String)]) { //by Artur
+        self.info = info
+        self.tableView?.reloadData()
+        
+        //tableView height constraint
+    }
+    
 }
 
 extension TableViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return info.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell_Inside
-        cell.label1.text = "index\(indexPath.row + 1)"
-        cell.label2.text = "barev"
+        cell.label1.text = info[indexPath.row].0 //"index\(indexPath.row + 1)"
+        cell.label2.text = info[indexPath.row].1 //"barev"
         return cell
     }
     
