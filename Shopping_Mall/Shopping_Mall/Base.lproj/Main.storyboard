@@ -2817,7 +2817,7 @@
         <image name="Categories_Fill" width="23" height="23"/>
         <image name="Home" width="23" height="23"/>
         <image name="Home_Fill" width="23" height="23"/>
-        <image name="More" width="23" height="23"/>
+        <image name="More" width="128" height="128"/>
         <image name="mall_logo" width="6257" height="2594"/>
         <image name="noImage" width="512" height="327"/>
         <image name="person" catalog="system" width="128" height="117"/>

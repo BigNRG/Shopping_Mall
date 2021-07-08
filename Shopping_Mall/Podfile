@@ -7,4 +7,6 @@ target 'Shopping_Mall' do
 
   # Pods for Shopping_Mall
 pod 'iOSDropDown'
+pod 'ImageSlideshow', '~> 1.9.0'
+
 end
