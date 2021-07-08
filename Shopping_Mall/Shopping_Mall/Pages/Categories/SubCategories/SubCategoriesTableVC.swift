@@ -10,6 +10,7 @@ import UIKit
 class SubCategoriesTableVC: UITableViewController {
     var subcategoryTitle = ""
     var subCategories = [SubCategory]()
+    var categories = [Category]()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView() // remove unused cells
@@ -44,67 +45,39 @@ class SubCategoriesTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
 //        let subcategoryid = subCategories[indexPath.row].id
-        AdGetRequestManager.loadSales(pageNumber: 1, adCount: 20, subCategoryID: 1) { loadedSalesData in
+//        AdGetRequestManager.loadRealEstate(pageNumber: 1, adCount: 20, subCategoryID: 2) { loadedRealEstate in
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProductsTableVC_ID") as! ProductsTableVC
+//            vc.loadedRealEstate = loadedRealEstate ?? []
+//            print("vc.loadedRealEstate \(vc.loadedRealEstate)")
+//            print("SubCategoryID: ", self.subCategories[indexPath.row].id)
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
+//        AdGetRequestManager.loadRealEstate(pageNumber: 1, adCount: 20, subCategoryID: 4) { loadedElectronics in
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProductsTableVC_ID") as! ProductsTableVC
+//            vc.loadedElectronics = loadedElectronics ?? []
+////            print("vc.loadedRealEstate \(vc.loadedRealEstate)")
+////            print("SubCategoryID: ", self.subCategories[indexPath.row].id)
+//            self.navigationController?.pushViewController(vc, animated: true)
+//
+//        }
+        
+//        switch categories[0].id {
+//            case 1:
+//
+//        }
+        AdGetRequestManager.loadSports(pageNumber: 1, adCount: 20, subCategoryID: subCategories[0].id) { loadedSport in
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProductsTableVC_ID") as! ProductsTableVC
-            vc.loadedSales = loadedSalesData ?? []
+            vc.loadedSport = loadedSport ?? []
+            print("vc.loadedRealEstate \(vc.loadedSport)")
+            print(loadedSport?.count)
             print("SubCategoryID: ", self.subCategories[indexPath.row].id)
+            
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }

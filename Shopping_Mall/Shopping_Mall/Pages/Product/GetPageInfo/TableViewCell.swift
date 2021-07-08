@@ -9,9 +9,11 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
+    var loadedSport = GetSportElements()
+    
     private var info: [(String, String)] = [] // by Artur
     
-        let number = "094231323"
+    static var number = ""
     
     
 //        cell 1
@@ -59,6 +61,8 @@ class TableViewCell: UITableViewCell {
         }
     }
     
+    @IBOutlet weak var heightSize: NSLayoutConstraint!
+    
     internal var aspectConstraint : NSLayoutConstraint? {
         didSet {
             if oldValue != nil {
@@ -81,6 +85,9 @@ class TableViewCell: UITableViewCell {
           super.awakeFromNib()
         tableView?.delegate = self
         tableView?.dataSource = self
+        
+        tableView?.separatorColor = .clear
+
           // Initialization code
 //          setUpTable()
       }
@@ -101,11 +108,15 @@ class TableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         aspectConstraint = nil
+        
+        TableViewCell.number = phoneNumber.title(for: .normal) ?? ""
+
+        
     }
     
     @IBAction func contactNumber(_ sender: UIButton) {
         
-        if let url = URL(string: "tel://\(number)"),
+        if let url = URL(string: "tel://\(loadedSport[0].contact)"),
            UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
@@ -127,9 +138,17 @@ class TableViewCell: UITableViewCell {
     
     func setInfo(_ info: [(String, String)]) { //by Artur
         self.info = info
+        info.map {$0.1}
+        info.map {$0.0}
+        
+        
         self.tableView?.reloadData()
         
         //tableView height constraint
+        
+        heightSize?.constant = CGFloat(info.count * 30)
+
+        
     }
     
 }
@@ -143,8 +162,10 @@ extension TableViewCell: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell_Inside
         cell.label1.text = info[indexPath.row].0 //"index\(indexPath.row + 1)"
         cell.label2.text = info[indexPath.row].1 //"barev"
+        cell.selectionStyle = .none
+        
         return cell
     }
     
-    
+
 }

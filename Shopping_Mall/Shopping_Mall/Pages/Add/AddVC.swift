@@ -237,6 +237,7 @@ class AddVC: UIViewController {
     var gender = ["Man", "Woman"]
     var cityIdArray = [Int]()
     var selectedCagegoryID = 0
+    var selectedSubCategoryID = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -333,20 +334,20 @@ class AddVC: UIViewController {
         ownerDropDown.didSelect(completion: { (selected, index, id)  in
             print("Selected Owner: \(selected) \n index: \(index)")
 //            self.realEstate.updateValue(index, forKey: "owner")
-            AddArrayModels.realEstate.updateValue(index, forKey: "owner")
+            AddArrayModels.sport.updateValue(index, forKey: "owner")
         })
 
         currencyDropDown.optionArray = currency
         currencyDropDown.didSelect(completion: { (selected, index, id)  in
             print("Selected Currency: \(selected) \n index: \(index)")
 //            self.realEstate.updateValue(index, forKey: "currency")
-            AddArrayModels.realEstate.updateValue(index, forKey: "currency")
+            AddArrayModels.sport.updateValue(index, forKey: "currency")
         })
 
         countryDropDown.didSelect{(selectedText , index ,id) in
             print("Selected Country: \(selectedText) \n index: \(index)")
 //            self.realEstate.updateValue(index + 1, forKey: "country")
-            AddArrayModels.realEstate.updateValue(index + 1, forKey: "country")
+            AddArrayModels.sport.updateValue(index + 1, forKey: "country")
             self.regionDropDown.optionArray = [""]
             self.regionDropDown.text = ""
             LocationRequestManager.getRegion(culture: "EN", countryID: index + 1) { [weak self] loadedRegion in
@@ -357,7 +358,7 @@ class AddVC: UIViewController {
         regionDropDown.didSelect{(selectedText ,index ,id) in
             print("Selected Region: \(selectedText) \n index: \(index)")
 //            self.realEstate.updateValue(index + 1, forKey: "region")
-            AddArrayModels.realEstate.updateValue(index + 1, forKey: "region")
+            AddArrayModels.sport.updateValue(index + 1, forKey: "region")
             self.cityStateDropDown.optionArray = [""]
             self.cityStateDropDown.text = ""
             LocationRequestManager.getCity(culture: "EN", regionID: index + 1) { [weak self] loadedCity in
@@ -370,48 +371,48 @@ class AddVC: UIViewController {
         cityStateDropDown.didSelect(completion: { (selectedText, index, id)  in
             print("Selected City: \(selectedText) \n index: \(index)")
 //            self.realEstate.updateValue(self.cityIdArray[index], forKey: "city")
-            AddArrayModels.realEstate.updateValue(self.cityIdArray[index], forKey: "city")
+            AddArrayModels.sport.updateValue(self.cityIdArray[index], forKey: "city")
         })
 
         aimDropDown.optionArray = aim
         aimDropDown.didSelect(completion: { (selected, index, id)  in
             print("Selected aim: \(selected) \n index: \(index)")
 //            self.realEstate.updateValue(index, forKey: "aim")
-            AddArrayModels.realEstate.updateValue(index, forKey: "aim")
+            AddArrayModels.sport.updateValue(index, forKey: "aim")
         })
 
         floorDropDown.optionArray = floors
         floorDropDown.didSelect(completion: { (selected, index, id)  in
             print("Selected floor: \(selected) \n index: \(index)")
 //            self.realEstate.updateValue(index + 1, forKey: "floor")
-            AddArrayModels.realEstate.updateValue(index, forKey: "floor")
+            AddArrayModels.sport.updateValue(index, forKey: "floor")
         })
 
         roomsDropDown.optionArray = rooms
         roomsDropDown.didSelect(completion: { (selected, index, id)  in
             print("Selected rooms: \(selected) \n index: \(index)")
 //            self.realEstate.updateValue(index + 1, forKey: "rooms")
-            AddArrayModels.realEstate.updateValue(index, forKey: "rooms")
+            AddArrayModels.sport.updateValue(index, forKey: "rooms")
         })
 
         constructionTypeDropDown.optionArray = constructionType
         constructionTypeDropDown.didSelect(completion: { (selected, index, id)  in
             print("Selected Construction type: \(selected) \n index: \(index)")
 //            self.realEstate.updateValue(index, forKey: "constructionType")
-            AddArrayModels.realEstate.updateValue(index, forKey: "constructionType")
+            AddArrayModels.sport.updateValue(index, forKey: "constructionType")
         })
         
         globalProductStateDropDown.optionArray = productState
         globalProductStateDropDown.didSelect(completion: { (selected, index, id)  in
             print("Selected Global Product State: \(selected) \n index: \(index)")
 //            self.realEstate.updateValue(index, forKey: "constructionType")
-            AddArrayModels.realEstate.updateValue(index, forKey: "constructionType")
+            AddArrayModels.sport.updateValue(index, forKey: "productState")
         })
         
         productStateDropDown.optionArray = productState
         productStateDropDown.didSelect(completion: { (selected, index, id)  in
             print("Selected Product State: \(selected) \n index: \(index)")
-            self.realEstate.updateValue(index, forKey: "constructionType")
+            AddArrayModels.sport.updateValue(index, forKey: "productState")
         })
         genderDropDown.optionArray = gender
         genderDropDown.didSelect(completion: { (selected, index, id)  in
@@ -468,24 +469,41 @@ class AddVC: UIViewController {
     }
     
     @IBAction func addButtonAction(_ sender: Any) {
+        
         var base64Images = [String]()
         for i in 0 ..< uploadedImagesArray.count {
             base64Images.append(uploadedImagesArray[i].toBase64(format: .png) ?? "")
         }
-        AddArrayModels.realEstate.updateValue(base64Images, forKey: "imagesList")
+        AddArrayModels.sport.updateValue("100001", forKey: "userID") //test user ID
+        AddArrayModels.sport.updateValue(0, forKey: "state") //user state
+        AddArrayModels.sport.updateValue(selectedSubCategoryID, forKey: "subCategoryID")
+        AddArrayModels.sport.updateValue(base64Images, forKey: "imagesList")
         let price = priceTextField.text
-        AddArrayModels.realEstate.updateValue(Int(price ?? "0") ?? 0, forKey: "price")
-        AddArrayModels.realEstate.updateValue(nameTextField.text ?? "", forKey: "name")
-        AddArrayModels.realEstate.updateValue(phoneNumberTextField.text ?? "", forKey: "contact")
-        AddArrayModels.realEstate.updateValue(descriptionTextView.text ?? "", forKey: "description")
-        AddArrayModels.realEstate.updateValue(spaceTextField.text ?? "", forKey: "space")
+        AddArrayModels.sport.updateValue(Int(price ?? "0") ?? 0, forKey: "price")
+        AddArrayModels.sport.updateValue(nameTextField.text ?? "", forKey: "name")
+        AddArrayModels.sport.updateValue(tagsTextField.text ?? "", forKey: "tags")
+        AddArrayModels.sport.updateValue(phoneNumberTextField.text ?? "", forKey: "contact")
+        AddArrayModels.sport.updateValue(descriptionTextView.text ?? "", forKey: "description")
+        AddArrayModels.sport.updateValue(spaceTextField.text ?? "", forKey: "space")
+
+        realEstate.updateValue(nameTextField.text ?? "", forKey: "name")
         
-//        realEstate.updateValue(nameTextField.text ?? "", forKey: "name")
+        AdRequestManager.addSport(sportDict: AddArrayModels.sport)
         
-//        AdRequestManager.addRealEstate(realEstateDict: realEstate, culture: "EN") { addedElements in
-//            print("AddedElements: ", addedElements?.count as Any)
-//        }
-   
+        let alert = UIAlertController(
+          title: title,
+          message: "Your announcement was succesfully added",
+          preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+//            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popToRootViewController(animated: true)
+
+        }
+         
+        alert.addAction(okAction)
+
+        present(alert, animated: true, completion: nil)
+       
     }
     
 }

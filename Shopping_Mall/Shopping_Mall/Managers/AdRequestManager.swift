@@ -26,7 +26,7 @@ final class AdRequestManager: NSObject {
     private static let ADD_Services_URL = "Ad/Services"
     private static let ADD_Acquaintance_URL = "Ad/Acquaintance"
     private static let ADD_HealfCare_URL = "Ad/HealfCare"
-    private static let ADD_RSport_URL = "Ad/Sport"
+    private static let ADD_Sport_URL = "Ad/Sport"
     private static let ADD_Tourism_URL = "Ad/Tourism"
     private static let ADD_CigaretteAndAlcohol_URL = "Ad/CigaretteAndAlcohol"
     private static let ADD_EverythingElse_URL = "Ad/EverythingElse"
@@ -82,6 +82,54 @@ final class AdRequestManager: NSObject {
                     }
                 } else {DispatchQueue.main.async {
                     completion(nil)
+                }
+                
+                }
+            }
+        }.resume()
+    }
+    
+    // MARK: - Add Sport
+    static func addSport(sportDict: [String : Any]) {
+        guard let url = URL(string: RequestManager.baseURL + ADD_Sport_URL) else {return}
+        var request=URLRequest(url:url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue(RequestManager.tempToken, forHTTPHeaderField: "Authorization")
+        let parameters = ["id": 0,
+                          "userID": sportDict["userID"],
+                          "subCategoryID": sportDict["subCategoryID"],
+                          "currency": sportDict["currency"],
+                          "price": sportDict["price"],
+                          "country": sportDict["country"],
+                          "region": sportDict["region"],
+                          "city": sportDict["city"],
+                          "state": sportDict["state"],
+                          "description": sportDict["description"],
+                          "name": sportDict["name"],
+                          "locationLatitude": sportDict["locationLatitude"],
+                          "locationLongitude": sportDict["locationLongitude"],
+                          "contact": sportDict["contact"],
+                          "aim": sportDict["aim"],
+                          "owner": sportDict["owner"],
+                          "tags": sportDict["tags"],
+                          "isRegional": sportDict["isRegional"],
+                          "imagesList": sportDict["imagesList"],
+                          "productState": sportDict["productState"]] as [String : Any?]
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {fatalError() }
+        request.httpBody = httpBody
+        URLSession.shared.dataTask(with: request) {data, response, error in
+            let resp = response as! HTTPURLResponse
+            guard let data = data else {return}
+            do{
+                print("Add Sport Response Status code: ",resp.statusCode)
+                let decodedData = try? JSONDecoder().decode(SuccesfullyAdd.self, from: data)
+                if let result = decodedData{
+                    DispatchQueue.main.async {
+                        print("Succesfully added ID: ", result.id)
+                    }
+                } else {DispatchQueue.main.async {
+                    print("Error adding: ", error)
                 }
                 
                 }

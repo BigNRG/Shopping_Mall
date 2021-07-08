@@ -15,7 +15,7 @@ final class RequestManager: NSObject {
     private static let CONTENT_TYPE = "application/json"
     private static let HTTP_METHOD = "POST"
     
-    private static let TEMP_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzkwNDEzMjMsImlzcyI6Imh0dHA6Ly90cmFkZWxpc3QyLTAwMS1zaXRlMS5pdGVtcHVybC5jb20vIiwiYXVkIjoiTGlzdFRyYWRlIn0.Fv8nM0C-NxQGLGQtucbpmSERbV_jb_lp80fI2tue63U"
+    private static let TEMP_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDE1NjU2MDUsImlzcyI6Imh0dHA6Ly90cmFkZWxpc3QyLTAwMS1zaXRlMS5pdGVtcHVybC5jb20vIiwiYXVkIjoiTGlzdFRyYWRlIn0.kOGmVrLetgLEczSzVeFNNtJN0ITaevGgycF3eabjO4E"
     
     //getters
 

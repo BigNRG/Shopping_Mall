@@ -9,7 +9,12 @@ import UIKit
 
 class GetPageVC: UIViewController {
 
-    var loadedSingleSales = GetSale()
+    var loadedSingleSales = GetSaleElements()
+    var loadedSingleWorks = GetWorkElements()
+    var loadedRealEstate = RealEstateElements()
+    var loadedSport = GetSportElements()
+    var loadedElectronics = GetElectronicsElements()
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,13 +30,14 @@ class GetPageVC: UIViewController {
     let city = "Անգեղակոթ"
     
     let contactData = "Կոնտակտային տվյալ"
-    let phoneNumber = "094231323"
+//    let phoneNumber = "094231323"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
         
 ////
 //        tableView.estimatedRowHeight = tableView.rowHeight
@@ -40,7 +46,11 @@ class GetPageVC: UIViewController {
     }
     
 
-  
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
 
 }
 
@@ -81,10 +91,10 @@ extension GetPageVC: UITableViewDataSource {
         switch indexPath.row {
             case 0:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell
-                let image = UIImage(named: "8217_p7_l")
+                let image = UIImage(named: "woman")
                 cell.setPostedImage(image: image!)
                 cell.urgentLabel.isHidden = false
-                cell.vipLabel.isHidden = false
+                cell.vipLabel.isHidden = true
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! TableViewCell
@@ -93,25 +103,52 @@ extension GetPageVC: UITableViewDataSource {
                 return cell
             case 2:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! TableViewCell
-                cell.firmaModelYearLabel.text = firma + " " + model + ", " + year
+//              cell.firmaModelYearLabel.text = firma + " " + model + ", " + year
+//                print(loadedRealEstate[0].cityName)
+//                cell.firmaModelYearLabel.text = loadedRealEstate[0].name
+//                cell.priceLabel.text = "$ " + String(price)
+//                  cell.priceLabel.text = String(loadedRealEstate[0].price)
+                cell.priceLabel.text = String(loadedSport[0].price)
+                print(loadedSport[0].cityName)
+                cell.firmaModelYearLabel.text = loadedSport[0].name
                 cell.priceLabel.text = "$ " + String(price)
+                cell.priceLabel.text = String(loadedSport[0].price)
+                
                 return cell
             case 3:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell4", for: indexPath) as! TableViewCell
                 cell.contactData.text = contactData
-                cell.phoneNumber.setTitle(phoneNumber, for: .normal)
+//                cell.phoneNumber.setTitle(loadedRealEstate[0].contact, for: .normal)
+//                print(loadedRealEstate[0].constructionType)
+//                print(loadedRealEstate[0].currency)
+//                print(loadedRealEstate[0].contact)
+                cell.phoneNumber.setTitle(loadedSport[0].contact, for: .normal)
+                
+                
+//                cell.phoneNumber.setAttributedTitle(<#T##title: NSAttributedString?##NSAttributedString?#>, for: <#T##UIControl.State#>)
+                cell.loadedSport = loadedSport
+                
+
                 return cell
             case 4:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell5", for: indexPath) as! TableViewCell
-                cell.countryRegionCityLabel.text = country + "~" + region + "~" + city
+//                cell.countryRegionCityLabel.text = loadedRealEstate[0].countryName + " ~ " + loadedRealEstate[0].regionName + " ~ " + loadedRealEstate[0].cityName
+                cell.countryRegionCityLabel.text = loadedSport[0].countryName + " ~ " + loadedSport[0].regionName + " ~ " + loadedSport[0].cityName
+                
                 return cell
             case 5:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell6", for: indexPath) as! TableViewCell
                 //cell.setInfo(<#T##info: [(String, String)]##[(String, String)]#>) //by Artur
+                
+                
+                cell.setInfo([("Վազքը", loadedSport[0].name), ("Փոխանցման տուփը", loadedSport[0].cityName), ("Փոխանցման տուփը", loadedSport[0].name), ("Փոխանցման տուփը", loadedSport[0].cityName),])
+                
                 return cell
             case 6:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell7", for: indexPath) as! TableViewCell
-                cell.descriptionLabel.text = "Փոխանակում ցանկացած մեքենա պատվերով՝ Ձեր մեքենայի հետ (գումարի մինչև 40%-դիմաց կարող եք տալ Ձերը) Փոխանակվող մեքենան գնվելու է ԱՄՆ-ից Ձեր համաձայնությամբ,մի փոքր վթարված․ Նշված արժեքի մեջ ներառվում է *Մեքենայի արժեք *Տեղափոխում Երևան *Մաքսազերծում *Վթարված մասերի և տեխնիկական խնդիրների վերացում *Քիմմաքրում *Անվանափոխություն Ձեր հին մեքենան կարող եք տալ այն ժամանակ, երբ Ձեր պատվիրածը կլինի ՀՀ-ում, այն ստուգելուց հետո:"
+//                cell.descriptionLabel.text = loadedRealEstate[0].realEstateElementDescription
+                cell.descriptionLabel.text = loadedSport[0].getSportElementDescription
+                
                 return cell
             case 7:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell8", for: indexPath) as! TableViewCell

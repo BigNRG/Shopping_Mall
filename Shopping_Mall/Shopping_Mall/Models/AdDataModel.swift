@@ -6,3 +6,7 @@
 //
 
 import Foundation
+// MARK: - SuccesfullyAdd
+struct SuccesfullyAdd: Codable {
+    let id: Int
+}
