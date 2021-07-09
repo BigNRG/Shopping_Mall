@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kaM-vp-2Nv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XBc-vj-Zbi">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -24,22 +24,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhL-Dx-I5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2960.8695652173915" y="1099.5535714285713"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="qKX-sk-Qoy">
-            <objects>
-                <viewController id="nTB-yq-FCN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zsd-be-1jI">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="9iV-5i-1Bt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Jbx-qt-tz4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2W3-Ni-FdX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2960.8695652173915" y="1796.6517857142856"/>
         </scene>
         <!--Categories TableVC-->
         <scene sceneID="fqS-3y-t2d">
@@ -456,7 +440,7 @@
                         <segue destination="wvH-RC-3Q9" kind="relationship" relationship="viewControllers" id="0NP-7F-E7W"/>
                         <segue destination="133-uA-Pnj" kind="relationship" relationship="viewControllers" id="CPM-bf-BWt"/>
                         <segue destination="Qiv-0n-05N" kind="relationship" relationship="viewControllers" id="bVX-7n-24F"/>
-                        <segue destination="RPw-an-mQq" kind="relationship" relationship="viewControllers" id="y8L-Tn-lrB"/>
+                        <segue destination="NgD-gl-G3H" kind="relationship" relationship="viewControllers" id="ZOe-Ed-rAo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IN-J6-vRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -531,13 +515,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="nTB-yq-FCN" kind="relationship" relationship="rootViewController" id="bGH-qr-50X"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbj-SU-nCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2050.7246376811595" y="1796.6517857142856"/>
+            <point key="canvasLocation" x="551" y="1796"/>
         </scene>
         <!--Sub Categories TableVC-->
         <scene sceneID="0kb-OW-Qjf">
@@ -2809,8 +2790,684 @@
             </objects>
             <point key="canvasLocation" x="7018" y="-352"/>
         </scene>
+        <!--Search Result Navigation Controller-->
+        <scene sceneID="Y3n-bz-Qdb">
+            <objects>
+                <navigationController storyboardIdentifier="SearchResultNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="skP-Vx-u40" customClass="SearchResultNavigationController" customModule="Shopping_Mall" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gF3-UR-OZc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lJp-iM-HuY">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xJQ-aJ-Bva" kind="relationship" relationship="rootViewController" id="hOY-nf-sds"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twl-9O-w8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2962" y="-1007"/>
+        </scene>
+        <!--Search Result-->
+        <scene sceneID="kKa-0X-ZVj">
+            <objects>
+                <viewController id="xJQ-aJ-Bva" customClass="SearchPageVC" customModule="Shopping_Mall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tCQ-YX-SKf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Faj-we-2MN">
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Yw-Uw-0l3">
+                                    <size key="itemSize" width="189" height="188"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="vhT-bt-KMB" customClass="SearchCollectionViewCell" customModule="Shopping_Mall" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="189" height="188"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bfG-jB-ZrP">
+                                            <rect key="frame" x="0.0" y="0.0" width="189" height="188"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4D-NU-d5p">
+                                                    <rect key="frame" x="0.0" y="137" width="189" height="51"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="189" id="HKT-Qp-Apd"/>
+                                                        <constraint firstAttribute="height" constant="51" id="oXq-p7-Yy4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hh1-Gu-KOV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="189" height="136.66666666666666"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="j4D-NU-d5p" firstAttribute="leading" secondItem="bfG-jB-ZrP" secondAttribute="leading" id="JFs-zB-Xyi"/>
+                                                <constraint firstAttribute="bottom" secondItem="j4D-NU-d5p" secondAttribute="bottom" id="Ldw-AN-iHN"/>
+                                                <constraint firstAttribute="trailing" secondItem="j4D-NU-d5p" secondAttribute="trailing" id="P1M-fD-B87"/>
+                                                <constraint firstItem="Hh1-Gu-KOV" firstAttribute="leading" secondItem="bfG-jB-ZrP" secondAttribute="leading" id="jkc-LP-vYp"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hh1-Gu-KOV" secondAttribute="trailing" id="lj0-Ia-Unh"/>
+                                                <constraint firstItem="j4D-NU-d5p" firstAttribute="top" secondItem="Hh1-Gu-KOV" secondAttribute="bottom" constant="0.33333333333334281" id="xUS-kC-SvF"/>
+                                                <constraint firstItem="Hh1-Gu-KOV" firstAttribute="top" secondItem="bfG-jB-ZrP" secondAttribute="top" id="yjm-ar-yPb"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="customSize" width="189" height="188"/>
+                                        <connections>
+                                            <outlet property="coverImageView" destination="Hh1-Gu-KOV" id="9Ho-0b-uFO"/>
+                                            <outlet property="textLabel" destination="j4D-NU-d5p" id="qGR-rs-5oo"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="xJQ-aJ-Bva" id="RTh-2A-GTJ"/>
+                                    <outlet property="delegate" destination="xJQ-aJ-Bva" id="8xE-Ub-nUE"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YIR-0d-vlg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YIR-0d-vlg" firstAttribute="trailing" secondItem="Faj-we-2MN" secondAttribute="trailing" id="1Rd-qu-8ua"/>
+                            <constraint firstItem="YIR-0d-vlg" firstAttribute="bottom" secondItem="Faj-we-2MN" secondAttribute="bottom" id="Wj6-OQ-rX7"/>
+                            <constraint firstItem="Faj-we-2MN" firstAttribute="top" secondItem="YIR-0d-vlg" secondAttribute="top" id="cVn-zz-RDz"/>
+                            <constraint firstItem="Faj-we-2MN" firstAttribute="leading" secondItem="YIR-0d-vlg" secondAttribute="leading" id="nU2-38-UC6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search Result" id="odO-xn-GyI">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="miF-r4-TJe">
+                            <connections>
+                                <action selector="backButtonAction:" destination="xJQ-aJ-Bva" id="PFJ-Jv-aVb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="Faj-we-2MN" id="hsh-PN-rvy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SuF-sw-bhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3805" y="-1007"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="KpF-nk-If7">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="VR1-MC-a3m" customClass="ProfileViewController" customModule="Shopping_Mall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KBa-qL-yTY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgh-Ke-2LB">
+                                <rect key="frame" x="16" y="182" width="358" height="29"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="358" id="GOt-HS-Or2"/>
+                                    <constraint firstAttribute="height" constant="29" id="rrC-4q-vgo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="balams" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95Z-Vf-B3S">
+                                <rect key="frame" x="16" y="219" width="358" height="29"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XqU-7s-NFm">
+                                <rect key="frame" x="16" y="302" width="358" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Frst Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wzf-xq-Bb3">
+                                <rect key="frame" x="16" y="258" width="358" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="358" id="LnP-Jz-fJ7"/>
+                                    <constraint firstAttribute="height" constant="34" id="vjB-Yr-V3Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-2o-YCj">
+                                <rect key="frame" x="16" y="346" width="358" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-sU-Chd">
+                                <rect key="frame" x="16" y="389" width="358" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zsl-ml-FVw">
+                                <rect key="frame" x="16" y="433" width="358" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUK-Eh-s5d">
+                                <rect key="frame" x="16" y="521" width="358" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Addres" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhI-VP-uKm">
+                                <rect key="frame" x="16" y="477" width="358" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUb-LG-Cct">
+                                <rect key="frame" x="16" y="590" width="358" height="45"/>
+                                <color key="backgroundColor" red="0.9579547048" green="0.053748613850000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="358" id="G0J-vy-67o"/>
+                                    <constraint firstAttribute="height" constant="45" id="QBT-zE-ami"/>
+                                </constraints>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editUserProfaile:" destination="VR1-MC-a3m" eventType="touchUpInside" id="fdj-Nm-vcX"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8217_p7_l" translatesAutoresizingMaskIntoConstraints="NO" id="nqZ-od-wxh">
+                                <rect key="frame" x="140" y="53" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="90g-S6-PN2"/>
+                                    <constraint firstAttribute="width" constant="110" id="QYD-P5-7b6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hqy-EX-ofn"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NUK-Eh-s5d" firstAttribute="top" secondItem="zhI-VP-uKm" secondAttribute="bottom" constant="10" id="0dU-Fb-Eya"/>
+                            <constraint firstItem="Wzf-xq-Bb3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="95Z-Vf-B3S" secondAttribute="trailing" id="20X-dp-iPR"/>
+                            <constraint firstItem="Glb-2o-YCj" firstAttribute="height" secondItem="XqU-7s-NFm" secondAttribute="height" id="22x-p2-ja9"/>
+                            <constraint firstItem="Wzf-xq-Bb3" firstAttribute="width" secondItem="95Z-Vf-B3S" secondAttribute="width" id="2Cx-uv-31b"/>
+                            <constraint firstItem="nHg-sU-Chd" firstAttribute="width" secondItem="Glb-2o-YCj" secondAttribute="width" id="3zw-LK-Cer"/>
+                            <constraint firstItem="nHg-sU-Chd" firstAttribute="top" secondItem="Glb-2o-YCj" secondAttribute="bottom" constant="9" id="4DN-qB-ikY"/>
+                            <constraint firstItem="Zsl-ml-FVw" firstAttribute="width" secondItem="nHg-sU-Chd" secondAttribute="width" id="4GN-wQ-PWC"/>
+                            <constraint firstItem="Glb-2o-YCj" firstAttribute="top" secondItem="XqU-7s-NFm" secondAttribute="bottom" constant="10" id="4kh-tf-vcz"/>
+                            <constraint firstItem="Zsl-ml-FVw" firstAttribute="centerX" secondItem="nHg-sU-Chd" secondAttribute="centerX" id="7PU-Mo-AOc"/>
+                            <constraint firstItem="Glb-2o-YCj" firstAttribute="width" secondItem="XqU-7s-NFm" secondAttribute="width" id="7dy-ei-wh2"/>
+                            <constraint firstItem="Glb-2o-YCj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XqU-7s-NFm" secondAttribute="trailing" id="8Ga-4V-7Ip"/>
+                            <constraint firstItem="Hgh-Ke-2LB" firstAttribute="top" secondItem="nqZ-od-wxh" secondAttribute="bottom" constant="19" id="8Uu-Zh-rXf"/>
+                            <constraint firstItem="zhI-VP-uKm" firstAttribute="top" secondItem="Zsl-ml-FVw" secondAttribute="bottom" constant="10" id="8ij-O4-DAe"/>
+                            <constraint firstItem="XqU-7s-NFm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wzf-xq-Bb3" secondAttribute="trailing" id="Cod-8H-w5J"/>
+                            <constraint firstItem="95Z-Vf-B3S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hgh-Ke-2LB" secondAttribute="leading" id="DEm-hQ-sFz"/>
+                            <constraint firstItem="DUb-LG-Cct" firstAttribute="centerX" secondItem="NUK-Eh-s5d" secondAttribute="centerX" id="DYv-ur-Rse"/>
+                            <constraint firstItem="Wzf-xq-Bb3" firstAttribute="top" secondItem="95Z-Vf-B3S" secondAttribute="bottom" constant="10" id="Dg9-rS-cpH"/>
+                            <constraint firstItem="DUb-LG-Cct" firstAttribute="top" secondItem="NUK-Eh-s5d" secondAttribute="bottom" constant="35" id="EC2-eb-oYu"/>
+                            <constraint firstItem="Zsl-ml-FVw" firstAttribute="top" secondItem="nHg-sU-Chd" secondAttribute="bottom" constant="10" id="FEi-DL-Qpo"/>
+                            <constraint firstItem="NUK-Eh-s5d" firstAttribute="centerX" secondItem="zhI-VP-uKm" secondAttribute="centerX" id="Irf-We-fbC"/>
+                            <constraint firstItem="Wzf-xq-Bb3" firstAttribute="centerX" secondItem="95Z-Vf-B3S" secondAttribute="centerX" id="Joe-36-psO"/>
+                            <constraint firstItem="95Z-Vf-B3S" firstAttribute="centerX" secondItem="Hgh-Ke-2LB" secondAttribute="centerX" id="L2l-2x-EPQ"/>
+                            <constraint firstItem="Wzf-xq-Bb3" firstAttribute="leading" secondItem="95Z-Vf-B3S" secondAttribute="leading" id="Lcw-wt-S2C"/>
+                            <constraint firstItem="XqU-7s-NFm" firstAttribute="centerX" secondItem="Wzf-xq-Bb3" secondAttribute="centerX" id="Myr-Zz-th6"/>
+                            <constraint firstItem="Wzf-xq-Bb3" firstAttribute="height" secondItem="95Z-Vf-B3S" secondAttribute="height" multiplier="1.17241" id="Ocp-OH-ytc"/>
+                            <constraint firstItem="nHg-sU-Chd" firstAttribute="height" secondItem="Glb-2o-YCj" secondAttribute="height" id="QPo-v4-kzt"/>
+                            <constraint firstItem="NUK-Eh-s5d" firstAttribute="height" secondItem="zhI-VP-uKm" secondAttribute="height" id="Qgv-Qp-hfe"/>
+                            <constraint firstItem="Hgh-Ke-2LB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hqy-EX-ofn" secondAttribute="leading" constant="16" id="SmO-xa-9C6"/>
+                            <constraint firstItem="XqU-7s-NFm" firstAttribute="height" secondItem="Wzf-xq-Bb3" secondAttribute="height" id="SzC-BR-hVj"/>
+                            <constraint firstItem="XqU-7s-NFm" firstAttribute="width" secondItem="Wzf-xq-Bb3" secondAttribute="width" id="TFH-5c-KkS"/>
+                            <constraint firstItem="95Z-Vf-B3S" firstAttribute="width" secondItem="Hgh-Ke-2LB" secondAttribute="height" multiplier="358:29" id="VFj-Tq-4VE"/>
+                            <constraint firstItem="hqy-EX-ofn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Hgh-Ke-2LB" secondAttribute="trailing" constant="16" id="WPJ-mq-rlY"/>
+                            <constraint firstItem="XqU-7s-NFm" firstAttribute="top" secondItem="Wzf-xq-Bb3" secondAttribute="bottom" constant="10" id="axI-Jj-AHP"/>
+                            <constraint firstItem="nHg-sU-Chd" firstAttribute="centerX" secondItem="Glb-2o-YCj" secondAttribute="centerX" id="bwW-Mc-oiq"/>
+                            <constraint firstItem="95Z-Vf-B3S" firstAttribute="height" secondItem="Hgh-Ke-2LB" secondAttribute="height" id="bzD-rc-QhS"/>
+                            <constraint firstItem="Glb-2o-YCj" firstAttribute="centerX" secondItem="XqU-7s-NFm" secondAttribute="centerX" id="coJ-lc-i7N"/>
+                            <constraint firstItem="nHg-sU-Chd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Glb-2o-YCj" secondAttribute="trailing" id="dVA-vF-t5E"/>
+                            <constraint firstItem="XqU-7s-NFm" firstAttribute="leading" secondItem="Wzf-xq-Bb3" secondAttribute="leading" id="dVb-xz-0Ps"/>
+                            <constraint firstItem="hqy-EX-ofn" firstAttribute="trailing" secondItem="nqZ-od-wxh" secondAttribute="trailing" constant="140" id="fq5-Qx-RyT"/>
+                            <constraint firstItem="nHg-sU-Chd" firstAttribute="leading" secondItem="Glb-2o-YCj" secondAttribute="leading" id="gNA-lN-t2c"/>
+                            <constraint firstItem="95Z-Vf-B3S" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Hgh-Ke-2LB" secondAttribute="trailing" id="hG1-4c-I7o"/>
+                            <constraint firstItem="nqZ-od-wxh" firstAttribute="leading" secondItem="hqy-EX-ofn" secondAttribute="leading" constant="140" id="hRG-iR-i0t"/>
+                            <constraint firstItem="NUK-Eh-s5d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zhI-VP-uKm" secondAttribute="leading" id="iuP-2f-ezR"/>
+                            <constraint firstItem="95Z-Vf-B3S" firstAttribute="width" secondItem="Hgh-Ke-2LB" secondAttribute="width" id="j8S-Fb-Rou"/>
+                            <constraint firstItem="NUK-Eh-s5d" firstAttribute="trailing" secondItem="zhI-VP-uKm" secondAttribute="trailing" id="miZ-nK-k1m"/>
+                            <constraint firstItem="zhI-VP-uKm" firstAttribute="height" secondItem="Zsl-ml-FVw" secondAttribute="height" id="oBL-cd-1YO"/>
+                            <constraint firstItem="zhI-VP-uKm" firstAttribute="width" secondItem="Zsl-ml-FVw" secondAttribute="width" id="oh0-C4-wuY"/>
+                            <constraint firstItem="nqZ-od-wxh" firstAttribute="top" secondItem="hqy-EX-ofn" secondAttribute="top" constant="9" id="qUb-WC-7d1"/>
+                            <constraint firstItem="zhI-VP-uKm" firstAttribute="leading" secondItem="Zsl-ml-FVw" secondAttribute="leading" id="s3N-rI-DAN"/>
+                            <constraint firstItem="zhI-VP-uKm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zsl-ml-FVw" secondAttribute="trailing" id="sp5-BZ-JUp"/>
+                            <constraint firstItem="95Z-Vf-B3S" firstAttribute="top" secondItem="Hgh-Ke-2LB" secondAttribute="bottom" constant="8" symbolic="YES" id="uDe-2i-zQg"/>
+                            <constraint firstItem="NUK-Eh-s5d" firstAttribute="width" secondItem="zhI-VP-uKm" secondAttribute="width" id="udB-Fx-jU3"/>
+                            <constraint firstItem="Zsl-ml-FVw" firstAttribute="height" secondItem="nHg-sU-Chd" secondAttribute="height" id="xEM-ch-GkR"/>
+                            <constraint firstItem="Glb-2o-YCj" firstAttribute="leading" secondItem="XqU-7s-NFm" secondAttribute="leading" id="xo7-hS-z4l"/>
+                            <constraint firstItem="zhI-VP-uKm" firstAttribute="centerX" secondItem="Zsl-ml-FVw" secondAttribute="centerX" id="yS1-qG-Mna"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BallanceLabel" destination="95Z-Vf-B3S" id="ufA-Lm-Sqb"/>
+                        <outlet property="editButton" destination="DUb-LG-Cct" id="kpl-fP-Lkd"/>
+                        <outlet property="userAddresTextFiield" destination="zhI-VP-uKm" id="b6Y-tn-Lgd"/>
+                        <outlet property="userCityTextField" destination="nHg-sU-Chd" id="SkF-5o-iiz"/>
+                        <outlet property="userEmailLable" destination="Hgh-Ke-2LB" id="6g0-Ae-2mg"/>
+                        <outlet property="userFrstNameTextField" destination="Wzf-xq-Bb3" id="RDp-d3-M1l"/>
+                        <outlet property="userImageView" destination="nqZ-od-wxh" id="yFI-o1-VcC"/>
+                        <outlet property="userLastNametextField" destination="XqU-7s-NFm" id="xBx-wb-SKR"/>
+                        <outlet property="userPhoneNumberTextFiield" destination="NUK-Eh-s5d" id="HoO-Vp-QSl"/>
+                        <outlet property="userStreetTextFiield" destination="Glb-2o-YCj" id="U0Z-BD-hxj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SrB-y9-gr8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="2562"/>
+        </scene>
+        <!--WalletVC-->
+        <scene sceneID="u9g-JK-Kpb">
+            <objects>
+                <viewController storyboardIdentifier="WalletVC" id="XNH-y8-z9h" customClass="WalletVC" customModule="Shopping_Mall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Yl-Kn-fGY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="LYx-6n-vbr"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2K-VU-Xpv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2048" y="3213"/>
+        </scene>
+        <!--My AdsVC-->
+        <scene sceneID="Sjl-2j-Xbz">
+            <objects>
+                <viewController storyboardIdentifier="MyAdsVC" id="aba-BM-7qI" customClass="MyAdsVC" customModule="Shopping_Mall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wg7-Nv-1Xc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="18K-DG-OEK"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qQP-cd-9tK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2932" y="3213"/>
+        </scene>
+        <!--Terms Of ServiceVC-->
+        <scene sceneID="SVO-Xd-wKL">
+            <objects>
+                <viewController storyboardIdentifier="TermsOfServiceVC" id="Kdi-QU-vGe" customClass="TermsOfServiceVC" customModule="Shopping_Mall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9RN-vr-0wN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rp0-fS-AgM">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Terms of Service
+By accessing List.am you agree to be bound by the following terms and conditions of use.
+You are solely responsible for all information that you submit to List.am and any consequences that may result from it. We reserve the right to refuse or delete ads that we believe are inappropriate.
+The rights and obligations of the parties
+All information and materials appearing on List.am are protected by copyright and are the property of List.am or the party credited as the poster of the information.
+You may not copy, reproduce, distribute, publish, create derivative works, store electronically, transmit or in any way exploit for commercial gains or otherwise, any content posted or information on List.am
+Buy using List.am services, you acknowledge that you are solely responsible for the content of your ads, and you have all the necessary rights, licenses, permits for all the information in the ad, including without limitation all patents, trademarks, trade secrets, copyrights, or have the proper written consent for use of such information, license or permit from all individuals and companies identified in the ad.
+If you post ads on List.am providing false contact details or impersonating another party we reserve the right to pass your details on to the aggrieved third party, their agents or any law enforcement agency.
+You agree to:
+Not take any actions that could lead to disproportionately large load on the infrastructure of the site;
+Not use automated programs to gain access to the site;
+Not interfere or attempt to interfere with the normal functioning and other activities on the site, as well as to not interfere with any actions of the automatic systems or processes;
+Not use the information provided by other users in any other ways except for the purpose of the transaction with the user;
+Not discuss the actions of moderators and the site administration anywhere and with anyone, except through e-mail correspondence with the moderators;
+Not use names similar to the names of other users in order to impersonate other users or write messages on their behalf.
+List.am shall use all reasonable efforts to meet its obligations under this Agreement, including the normal operation of services and protecting personal information of users from third, except when required by law.
+List.am may periodically impose restrictions on the use of its services, in particular, the maximum number of days for the validity of information and size limitations. List.am may at any time change any functionality of the site or any of its features and content without prior notices and without incurring any liability for such changes.
+In order to maintain high quality of its content and services, List.am reserves the right to limit the number of active ads per user, and limit or block any actions from any users on List.am.
+List.am maintains the rights to deny the user access to the site if the user violates the terms of this agreement. List.am reserves the right at any time to delete or disable a user account, and remove all ads posted by the user, without any prior notice and in its sole discretion and without incurring responsibility for their actions to the user and third parties.
+List.am reserves the right at any time to require the user to confirm the information specified during registration or in the ad and request any supporting documents (in particular - copies of identity documents), the non-provisioning of which, at the user discretion, will be considered the same as providing false information. If the user data specified in the documents provided to List.am, does not match data specified in the registration or in the ad, as well as in the case when the data specified in the registration or in the ad does not properly identify the user, List.am may refuse the user the access to the site with or without prior notice.
+The user has the right to submit complaints regarding the functionality of the site by using our feedback form, which will be reviewed within three working days from the date of the receipt or the receipt of complete information regarding the nature of the complaint.
+As a condition of your use of this site you agree that you will not:
+Violate our Posting Rules.
+Post or transmit any unlawful, threatening, abusive, defamatory, obscene or indecent information or material of any kind, including without limitation any transmissions constituting or encouraging conduct that would constitute a criminal offence, give rise to civil liability or otherwise violate any applicable law
+Post or transmit any material of any kind which violates or infringes upon the rights of any other person, including material which is an invasion of any privacy or publicity rights or which is protected by copyright, trade mark or any other proprietary right, or derivative works with respect thereto, without first obtaining permission from the owner or relevant right holder
+Post or transmit any material containing information about illegal activities, services and products. This includes pyramid or multi-level marketing schemes, stolen or pirated material, drugs, dangerous chemicals, weapons, stolen goods.
+Post or transmit any material of any kind, which contains a virus or other harmful component
+Download any file posted by any other user if you know, or reasonably ought to know, that the file cannot legally be distributed in such manner.
+Limitation of Liability
+Using List.am, user acknowledges acceptance of the fact that the site and its services shall be used at your own risk, assesses and bears all risks associated with the use of ads placed on the site, while the site, including its management, employees and representatives accept no liability for the content of ads on the site or for any damages or loss resulting from the use of ads posted on this site.
+List.am is not the organizer / initiator of transactions between users or other third parties. List.am is a trading and communication platform that enables users to post information in order to sell and buy legally permitted goods and services at any time, from anywhere, at any price.
+List.am cannot control the accuracy of the information in ads posted by its users and is not liable for any damages incurred as a result of the transaction or improper conduct of any of the parties.
+List.am shall not be responsible for user behavior or their proposed products / services listed in their ads. All disputes and conflicts between users must be solved by the users without the involvement of List.am.
+Quality, safety, legality and conformity of the goods or services to their description, as well as the user's ability to sell or buy the product / service are beyond the control of the site.
+The user shall not assume that the sale and purchase of any goods or services is valid and legal based merely on the fact of placement of such information on our site. List.am is not responsible for completion of the transaction and the user accepts full responsibility for their actions.
+The information provided on this site may be used for informational purposes only. List.am shall not be responsible for the accuracy or reliability of the information provided. We also do not assume responsibility for those parts of the content, the accuracy of which has not been confirmed.
+Under no circumstances will we accept responsibility for placing by users unlawful, threatening, abusive, defamatory or obscene information or materials that violate or infringe upon the rights of any person, as well as provoking criminal behavior, public disorder or violations of existing law.
+Under no circumstances will we accept any liability for material damage and for loss of data or the rights to use the site, caused by problems when using or browsing the site and its content. Information on this site is continuously updated, and at any time may become outdated. The site may contain technical inaccuracies or typographical errors. We are not responsible for updating, as well as for failing to update any information on the site.
+List.am has provided links and pointers to Internet sites maintained by third parties. Such linked sites are not under our control and we are not responsible for the contents (including the accuracy, legality or decency) of any linked site or any link contained in a linked site. We provide these links to you only as a convenience, and the inclusion of any link does not imply endorsement by List.am of the linked site. We are not responsible for the copyright compliance of any linked site.
+List.am does not warrant that the service will be uninterrupted or error-free or that defects in the service will be corrected. You also understand that we cannot and do not guarantee or warrant that files available for downloading through our site or delivered via electronic mail through our site will be free of infection or viruses, worms, trojans or other code that manifest contaminating or destructive properties. You are responsible for implementing sufficient procedures and checkpoints to satisfy your particular requirements for accuracy of data input and output, and for maintaining a means external to the site for the reconstruction of any lost data.
+Duration of the agreement
+This agreement shall become binding from the moment the user starts using List.am or becomes a registered user and is valid indefinitely.
+The user has the right to terminate their registration on the site unilaterally, without prior notice to List.am and without explanation.
+If the user does not agree with the terms of this agreement, they must stop using the site and its services. Continuous usage of this site means that the user agrees to the terms of this agreement.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qLT-0K-LXd"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rp0-fS-AgM" firstAttribute="top" secondItem="qLT-0K-LXd" secondAttribute="top" id="8lj-3j-qHW"/>
+                            <constraint firstItem="Rp0-fS-AgM" firstAttribute="leading" secondItem="qLT-0K-LXd" secondAttribute="leading" id="9Iq-5I-A2b"/>
+                            <constraint firstItem="qLT-0K-LXd" firstAttribute="bottom" secondItem="Rp0-fS-AgM" secondAttribute="bottom" id="HVK-kQ-9Cp"/>
+                            <constraint firstItem="qLT-0K-LXd" firstAttribute="trailing" secondItem="Rp0-fS-AgM" secondAttribute="trailing" id="wwy-pn-0rD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96s-bl-Cur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3657" y="3216"/>
+        </scene>
+        <!--Change PasswordVC-->
+        <scene sceneID="7ii-Ng-jzC">
+            <objects>
+                <viewController storyboardIdentifier="ChangePasswordVC" id="X4u-BJ-VnF" customClass="ChangePasswordVC" customModule="Shopping_Mall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dOf-fd-vkW">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDX-1i-4n6">
+                                <rect key="frame" x="16" y="191" width="358" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ZRc-GT-sCe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="358" id="yC6-AG-0id"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Old Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R9E-Yh-gfy">
+                                <rect key="frame" x="16" y="276" width="358" height="60"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="New Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clw-lU-tTz">
+                                <rect key="frame" x="16" y="355" width="358" height="60"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1w-yW-8XF">
+                                <rect key="frame" x="16" y="470" width="358" height="58"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveChange:" destination="X4u-BJ-VnF" eventType="touchUpInside" id="2na-t5-AzN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Add-MJ-e26"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R9E-Yh-gfy" firstAttribute="width" secondItem="eDX-1i-4n6" secondAttribute="width" id="5l8-IT-h5x"/>
+                            <constraint firstItem="eDX-1i-4n6" firstAttribute="centerX" secondItem="Add-MJ-e26" secondAttribute="centerX" id="73L-nU-Ahz"/>
+                            <constraint firstItem="R9E-Yh-gfy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eDX-1i-4n6" secondAttribute="leading" id="7et-EB-Efr"/>
+                            <constraint firstItem="clw-lU-tTz" firstAttribute="width" secondItem="R9E-Yh-gfy" secondAttribute="width" id="F71-vH-RsI"/>
+                            <constraint firstItem="f1w-yW-8XF" firstAttribute="top" secondItem="clw-lU-tTz" secondAttribute="bottom" constant="55" id="Gf1-ca-It4"/>
+                            <constraint firstItem="R9E-Yh-gfy" firstAttribute="centerX" secondItem="eDX-1i-4n6" secondAttribute="centerX" id="NBF-uG-aFp"/>
+                            <constraint firstItem="clw-lU-tTz" firstAttribute="top" secondItem="R9E-Yh-gfy" secondAttribute="bottom" constant="19" id="Nhc-VW-NL0"/>
+                            <constraint firstItem="R9E-Yh-gfy" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eDX-1i-4n6" secondAttribute="trailing" id="RC6-JU-Tip"/>
+                            <constraint firstItem="clw-lU-tTz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="R9E-Yh-gfy" secondAttribute="leading" id="Rnv-FA-SVl"/>
+                            <constraint firstItem="clw-lU-tTz" firstAttribute="leading" secondItem="R9E-Yh-gfy" secondAttribute="trailing" constant="-358" id="T8w-Sb-csn"/>
+                            <constraint firstItem="R9E-Yh-gfy" firstAttribute="top" secondItem="eDX-1i-4n6" secondAttribute="bottom" constant="25" id="TK3-o0-gPm"/>
+                            <constraint firstItem="f1w-yW-8XF" firstAttribute="height" relation="greaterThanOrEqual" secondItem="clw-lU-tTz" secondAttribute="height" multiplier="0.966667" id="WdF-lY-guc"/>
+                            <constraint firstItem="clw-lU-tTz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="R9E-Yh-gfy" secondAttribute="trailing" id="Wvg-ei-kHG"/>
+                            <constraint firstItem="f1w-yW-8XF" firstAttribute="trailing" secondItem="clw-lU-tTz" secondAttribute="trailing" id="fZf-7h-xao"/>
+                            <constraint firstItem="f1w-yW-8XF" firstAttribute="width" secondItem="clw-lU-tTz" secondAttribute="width" id="h1h-fY-Tl6"/>
+                            <constraint firstItem="Add-MJ-e26" firstAttribute="trailing" secondItem="eDX-1i-4n6" secondAttribute="trailing" constant="16" id="iDC-Al-l6E"/>
+                            <constraint firstItem="eDX-1i-4n6" firstAttribute="leading" secondItem="Add-MJ-e26" secondAttribute="leading" constant="16" id="nFS-Wf-eEw"/>
+                            <constraint firstItem="f1w-yW-8XF" firstAttribute="leading" secondItem="clw-lU-tTz" secondAttribute="leading" id="pxD-Il-82E"/>
+                            <constraint firstItem="eDX-1i-4n6" firstAttribute="top" secondItem="Add-MJ-e26" secondAttribute="top" constant="147" id="qL6-3u-hiD"/>
+                            <constraint firstItem="R9E-Yh-gfy" firstAttribute="height" relation="greaterThanOrEqual" secondItem="eDX-1i-4n6" secondAttribute="height" id="toa-fB-Wm2"/>
+                            <constraint firstItem="clw-lU-tTz" firstAttribute="height" relation="greaterThanOrEqual" secondItem="R9E-Yh-gfy" secondAttribute="height" id="ul6-D1-6dv"/>
+                            <constraint firstItem="Add-MJ-e26" firstAttribute="bottom" secondItem="f1w-yW-8XF" secondAttribute="bottom" constant="282" id="wkf-6F-RNf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newPasswordTextField" destination="clw-lU-tTz" id="2TN-zS-B9A"/>
+                        <outlet property="oldPasswordtextField" destination="R9E-Yh-gfy" id="HaF-Px-mpM"/>
+                        <outlet property="phoneNumberTextField" destination="eDX-1i-4n6" id="7AR-2b-ZIf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGz-Hm-zjf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2972" y="2562"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="88h-cl-T4A">
+            <objects>
+                <viewController storyboardIdentifier="SettingsVC" id="emk-0D-QZb" customClass="SettingsVC" customModule="Shopping_Mall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6SS-ZO-hzC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="scl-I5-Ytp"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rCA-ne-7db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3715" y="2563"/>
+        </scene>
+        <!--Posting RulesVC-->
+        <scene sceneID="OPA-Ko-bk3">
+            <objects>
+                <viewController storyboardIdentifier="PostingRulesVC" id="hHG-fU-38x" customClass="PostingRulesVC" customModule="Shopping_Mall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0pV-3H-Na6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgl-YL-PT9">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Before you can proceed you must carefully read and agree to List.am Posting Rules.
+Posting Rules
+List.am Posting Rules serve the purpose of enforcing the quality of content and easy of use for buyers as well as sellers. By using our site and its features and services you accept and agree to follow our Posting Rules.
+Users violating our Posting Rules will have their access to the site blocked for a significant amount of time and their ads and other information will be removed.
+1.
+It is not allowed to add multiple ads or to repeat the original ad in the same or different categories.
+2.
+Each ad must be posted in the most appropriate category.
+2.1.
+Ads must be placed in the category corresponding to the content of the ad.
+2.2.
+Ads offering services must be posted in the "Services" category.
+2.3.
+Ads offering jobs must be posted in the "Jobs" category.
+3.
+When placing an ad, remember that:
+3.1.
+Your ad should contain detailed information about the product / service you are offering / seeking.
+3.2.
+All ad parameters (such as price, square footage, make, model, salary, etc) must be true. The title of your ad must match with its content.
+3.3.
+The title should not contain contact information, such as phone, address, e-mail or product/service's price.
+3.4.
+Ad description cannot contain contact phone numbers. Please use designated fields for that.
+3.5.
+Photos, showing the product / service must conform to the ad title and body. Photos must not contain any type of logo, brand, URL, company name, price, text, decorative elements or any other advertising or contact information. Photos must not contain labels or text seeking attention such as "Urgent", "Attention", "Sale" or similar.
+3.6.
+Each ad should contain only one single item. If you are offering multiple products please place them in separate ads.
+3.7.
+Each user can be registered only once. Duplicate or multiple ads from different emails from the same person or organization are not allowed.
+3.8.
+Each ad must be created using the alphabet of the language in which it is written. Armenian words must be written using Armenian letters, Russian - using Russian letters, etc. The use of transliteration is not allowed.
+4.
+Any actions aimed at gaming or manipulating normal operation of the site are forbidden. This includes:
+4.1.
+Adding keywords to the title or description of an ad in order to trick search algorithms.
+4.2.
+Indicating phone numbers using letters or non-numeric symbols in the title or description of an ad.
+4.3.
+Deleting and re-adding ads in order to move them to the top of the list is not allowed. To move an ad to the top of the list please use the renew function.
+4.4.
+Using different email addresses and phone numbers to hide identity or mislead the site or its visitors.
+4.5.
+Ads for non-existent goods, vehicles, real estate, services or jobs are strictly forbidden.
+4.6.
+It is not allowed to replace the product, service or job described in the ad with another product, service or job. Ads that are no longer actual must be removed from publication.
+5.
+Rules for real estate agencies, dealers, employment agencies, organizations and entrepreneurs.
+5.1.
+Users representing third parties or organizations and businesses cannot select "Owner" option when posting an ad. A clear indication of company's information (name and physical address) is required for employers and employment and real estate agencies and commercial organizations as well as shops and organizations offering loans.
+5.2.
+Agencies and organizations must use only one registered account for all their employees. It is not allowed to place similar ads using agency's account and agent's personal account. If your organization already has an account with List.am, please provide access to it to all your staff.
+5.3.
+Agencies cannot offer real estate for sale or rent without the knowledge and consent of the owner. List.am reserves the right to request the legal documents including the contract and refuse to publish the ads.
+5.4.
+Real estate agencies must remove ads from List.am as soon as the property is rented, bought or sold.
+5.5.
+Job ads must include detailed information about the vacancy and contain at least three blocks: requirements, responsibilities and job description.
+5.6.
+Offers for importing cars from abroad can only be placed in the category "Vehicles » Cars from Abroad".
+6.
+Ads that contain the following items are not allowed on List.am:
+6.1.
+Offers of goods and services, which are prohibited or restricted by any applicable law.
+6.2.
+Offensive/adult language, derogatory remarks, as well as calls to violence and illegal actions.
+6.3.
+Sale of access to online accounts, passwords and information about third parties, as well as related services.
+6.4.
+Erotic services and goods, prostitution, pornography, including photos with pornographic content.
+6.5.
+Fraud, extortion, request or offer material assistance and support in any form, including postings that contain expressions such as, "I will sponsor", "looking for a sponsor," "will provide financial support," "looking for financial support", etc.
+6.6.
+Offers of work in night clubs, strip clubs, web modeling and similar.
+6.7.
+Offer to sell, purchase or exchange prescription drugs, narcotics or human organs.
+6.8.
+Offers to work outside of Armenia (including Russia) or offers to make money over the Internet.
+6.9.
+Proposals related to the occult subjects (satanism, rituals, magic, psychics, etc.).
+6.10
+Discrimination based on nationality, race, religion, gender and other characteristics.
+6.11.
+Offers to sell products of multi-level marketing companies such as Oriflame, Herbalife, Avon, Amway, Intway, Mary Kay, etc., as well as contains job openings and other services related to those companies.
+6.12.
+Offers of questionable financial services, assistance in obtaining funds, for example, "Loans in an hour. No approvals". Services and transactions with financial assets and accounts, offers for investments of money or assets.
+7.
+Ads that contain the following type of jobs are not allowed on List.am:
+7.1.
+Franchise, pyramid, matrix and trading schemes, multi-level marketing.
+7.2.
+Commission only jobs, or any other business activity which requires prior or ongoing payment.
+7.3.
+Recruitment of other members or subagents as well as "work from home" programs.
+8.
+List.am prohibits the publication of ads whose sole purpose is to promote other online resources. It is not allowed to put a link in an ad directing people to further details on another website. You can only put a link directing to a particular product that you are offering. It is also not allowed to place links to other websites in the ads in the "Real Estate" category.
+9.
+List.am prohibits false or misleading advertisements and placement of distorted information about third parties. List.am is not liable for any content posted.
+In accordance with the above mentioned terms and rules, List.am reserves the right to remove and discard ads with or without any reason.
+Users, who intentionally breach these rules, will receive notification, and if the problem is not solved after all, their access to the site will become limited.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5E0-l5-L0M"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5E0-l5-L0M" firstAttribute="bottom" secondItem="Qgl-YL-PT9" secondAttribute="bottom" id="0sZ-yl-wr3"/>
+                            <constraint firstItem="Qgl-YL-PT9" firstAttribute="top" secondItem="5E0-l5-L0M" secondAttribute="top" id="gT0-pw-kDS"/>
+                            <constraint firstItem="5E0-l5-L0M" firstAttribute="trailing" secondItem="Qgl-YL-PT9" secondAttribute="trailing" id="lk5-Pq-2wm"/>
+                            <constraint firstItem="Qgl-YL-PT9" firstAttribute="leading" secondItem="5E0-l5-L0M" secondAttribute="leading" id="ms8-hR-Wyb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTV-nJ-J83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4508" y="2575"/>
+        </scene>
+        <!--User Profile View Controller-->
+        <scene sceneID="PtK-7F-DbL">
+            <objects>
+                <viewController id="eB7-2r-ddT" customClass="UserProfileViewController" customModule="Shopping_Mall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DCi-WY-4ds">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KD5-fj-jAb">
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Pep-UK-zIv">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pep-UK-zIv" id="Eaw-3I-X0W">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0K8-lY-4Qt">
+                                                    <rect key="frame" x="0.0" y="43" width="390" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="fx9-39-z6m"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="0K8-lY-4Qt" secondAttribute="trailing" id="92F-bf-44Z"/>
+                                                <constraint firstItem="0K8-lY-4Qt" firstAttribute="leading" secondItem="Eaw-3I-X0W" secondAttribute="leading" id="Lzx-hL-bdz"/>
+                                                <constraint firstAttribute="bottom" secondItem="0K8-lY-4Qt" secondAttribute="bottom" id="vDz-Vx-blT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eB7-2r-ddT" id="4pw-Ba-277"/>
+                                    <outlet property="delegate" destination="eB7-2r-ddT" id="LDU-W1-nf3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iqh-AG-jSw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iqh-AG-jSw" firstAttribute="trailing" secondItem="KD5-fj-jAb" secondAttribute="trailing" id="8MD-Mg-EAm"/>
+                            <constraint firstItem="KD5-fj-jAb" firstAttribute="top" secondItem="iqh-AG-jSw" secondAttribute="top" id="KdD-Gd-P2D"/>
+                            <constraint firstItem="iqh-AG-jSw" firstAttribute="bottom" secondItem="KD5-fj-jAb" secondAttribute="bottom" id="Lw0-jp-Xf1"/>
+                            <constraint firstItem="KD5-fj-jAb" firstAttribute="leading" secondItem="iqh-AG-jSw" secondAttribute="leading" id="nGy-5M-3mf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RmS-uc-Kif"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bD-yk-bBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2995" y="1796"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="6e5-vf-Lif">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NgD-gl-G3H" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="4" title="Profile" image="person.circle" catalog="system" landscapeImage="person.circle" largeContentSizeImage="person.circle" selectedImage="person.circle" id="3D2-V3-XKa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y9K-Wo-Z2z">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eB7-2r-ddT" kind="relationship" relationship="rootViewController" id="L1d-he-sgR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7IZ-zw-we2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057" y="1796"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="8217_p7_l" width="1920" height="1279"/>
         <image name="Add" width="40" height="40"/>
         <image name="Add_Fill" width="40" height="40"/>
         <image name="Categories" width="23" height="23"/>
@@ -2821,6 +3478,7 @@
         <image name="mall_logo" width="6257" height="2594"/>
         <image name="noImage" width="512" height="327"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="pin-1" width="25" height="25"/>
         <image name="plus" catalog="system" width="128" height="113"/>
@@ -2831,11 +3489,20 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

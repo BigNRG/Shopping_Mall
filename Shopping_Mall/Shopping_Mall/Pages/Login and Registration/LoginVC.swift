@@ -70,7 +70,9 @@ class LoginVC: UIViewController {
                 //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarVC_ID") as! TabBarController
                 ////            vc.loadedSales = loginedUser ?? []
                 //            self.navigationController?.pushViewController(vc, animated: true)
+                UserDefaults.standard.setValue(loginedUser?.id, forKey: "userId")
                 self.performSegue(withIdentifier: "goToTabBar", sender: nil)
+                print(loginedUser)
             }
             
             
