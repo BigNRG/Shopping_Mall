@@ -8,46 +8,92 @@
 
 /* Begin PBXBuildFile section */
 		3DE63FEDAEA7896D5E36C1C8FE7CB7D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		476EE799F09C2CD393ED330AB1E4197C /* Pods-Shopping_Mall-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C7645DE28CE43FDEA838700298E17 /* Pods-Shopping_Mall-dummy.m */; };
-		6762724102132C861217B911E70056ED /* iOSDropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A78BF6B03DED20C609704AE7C949C04 /* iOSDropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6ADFB626C34AA35AC883469526699F8D /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DBD197BF8C4A95CF11BB10B92F671 /* iOSDropDown.swift */; };
-		B7C75C361A9F21800B7A9297948C1F30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		C312131E6526BFB7C1CB92D93D58FCC7 /* iOSDropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 562E1B0CB7AF0F74F35EBD9B634DF54D /* iOSDropDown-dummy.m */; };
+		3FB533600F0CD6A1BB8CE8F7DE98294B /* ImageSlideshowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72157F4B465DBA1D720DBF8658A32185 /* ImageSlideshowItem.swift */; };
+		411493B2202223EBDA15B0262FEAAFAB /* Bundle+Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C56DB429F7CDC83C70211AEAC623C3 /* Bundle+Module.swift */; };
+		4DB642303FD069BF6458764211FBAB91 /* ZoomAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2BA4E21748A62BC566B3708060C1B7 /* ZoomAnimatedTransitioning.swift */; };
+		58941AA633F3E524EB2E3725630DD9BD /* PageIndicatorPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68912EBE98F56E14D5A4F744CA09F54 /* PageIndicatorPosition.swift */; };
+		6762724102132C861217B911E70056ED /* iOSDropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD25FA070A80CEF5F0CF1D09B471BED0 /* iOSDropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6ADFB626C34AA35AC883469526699F8D /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133F5AB7F9CC1A7C04EF4DEF55A552F /* iOSDropDown.swift */; };
+		74F4CAAE11862825CE41B2BD48650DAC /* PageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07E2FE3E5AA29339602A376AC0C5FD /* PageIndicator.swift */; };
+		80A6FFAA7E911E0CA2C86C5A38322990 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		80C9832ED9404C30CCBACE63EB8BE3C7 /* InputSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F0C6448F2BDE27F60D328A53CEBDC /* InputSource.swift */; };
+		929851052C71A2D361EF36EA06000782 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3CA1450FB844ABD553FC77D135B8D6 /* ActivityIndicator.swift */; };
+		953E65E792A8C765FD478A793399C3B4 /* ic_cross_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 990CB6E66832F0585BDF167D3B45E4D5 /* ic_cross_white@2x.png */; };
+		9B11D46D43CB163BF7E83DAE35868DA4 /* ImageSlideshow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 989AE6807F9C7203643C12F04B2C696C /* ImageSlideshow-dummy.m */; };
+		B04CA28F483FD8C3CE24973E08CA3E81 /* ImageSlideshow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E9E9D1435534CD7E6D1A4A979C8D8C /* ImageSlideshow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0E156222C736D564F32E80DFF538144 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		B0FBA1361925CA393897E7542FDEC2A8 /* ic_cross_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC3F6670C5C106282100B1A1F43F5E33 /* ic_cross_white@3x.png */; };
+		C312131E6526BFB7C1CB92D93D58FCC7 /* iOSDropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E14BE006F94A58E977E07F8EE3AD55 /* iOSDropDown-dummy.m */; };
 		C9980BB2C99EC955BAB7D09899FACBE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		CDDE2A96135CA0747DE0063B3E798073 /* Pods-Shopping_Mall-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F6576B97912214ACE2F40D0DE8FBAF6D /* Pods-Shopping_Mall-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEAB378498A2FB2854FB35B044AA9045 /* UIImage+AspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2523065EC9B1A204D01DF18069BC6D /* UIImage+AspectFit.swift */; };
+		D9277DE99A99D0AFC8118B912636FEB3 /* Pods-Shopping_Mall-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F6576B97912214ACE2F40D0DE8FBAF6D /* Pods-Shopping_Mall-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA31781C00F6AF610FC11B64C77EEC86 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4540E15D632DE60D1036822601B3C82 /* SwiftSupport.swift */; };
+		EBE2E613F382FA1E12D589199C62A529 /* Pods-Shopping_Mall-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C7645DE28CE43FDEA838700298E17 /* Pods-Shopping_Mall-dummy.m */; };
+		F88D01943135AD10755532B87F59426D /* ImageSlideshow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A080C7116926342DD2E1835DBDF817 /* ImageSlideshow.swift */; };
+		FCFA3362A8102C423357194A0467D6B6 /* FullScreenSlideshowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209A942B5126BFDE81A9C03AD3D0E87 /* FullScreenSlideshowViewController.swift */; };
+		FF9DB515D08214CD5C6E45E1F6D1D80D /* UIImageView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4060DCFF45BBAF7F2505A219848564 /* UIImageView+Tools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C32AD9017DBED1DAAF1F2DE69BA775B4 /* PBXContainerItemProxy */ = {
+		53C2407DD154F9473076A1D0E5DA8680 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3C76CE6CD60B1CE55A174F03CC59AE17;
 			remoteInfo = iOSDropDown;
 		};
+		8525439A847E81483C16432EC3D29B85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2F46A67275CC5973EE13076CD708247;
+			remoteInfo = ImageSlideshow;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A78BF6B03DED20C609704AE7C949C04 /* iOSDropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-umbrella.h"; sourceTree = "<group>"; };
+		04A080C7116926342DD2E1835DBDF817 /* ImageSlideshow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageSlideshow.swift; path = ImageSlideshow/Classes/Core/ImageSlideshow.swift; sourceTree = "<group>"; };
+		05120410B0731C1C225AB99B52A4D3BC /* ImageSlideshow-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ImageSlideshow-Info.plist"; sourceTree = "<group>"; };
+		09C56DB429F7CDC83C70211AEAC623C3 /* Bundle+Module.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+Module.swift"; path = "ImageSlideshow/Classes/Core/Bundle+Module.swift"; sourceTree = "<group>"; };
+		1B07E2FE3E5AA29339602A376AC0C5FD /* PageIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageIndicator.swift; path = ImageSlideshow/Classes/Core/PageIndicator.swift; sourceTree = "<group>"; };
+		1E7F0C6448F2BDE27F60D328A53CEBDC /* InputSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InputSource.swift; path = ImageSlideshow/Classes/Core/InputSource.swift; sourceTree = "<group>"; };
+		22E9E9D1435534CD7E6D1A4A979C8D8C /* ImageSlideshow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImageSlideshow-umbrella.h"; sourceTree = "<group>"; };
 		2E67A8862612C957968F88B3DD7C06AE /* Pods-Shopping_Mall-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Shopping_Mall-acknowledgements.markdown"; sourceTree = "<group>"; };
 		30E63F09A0543D57FDB154949A84508E /* Pods-Shopping_Mall.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Shopping_Mall.modulemap"; sourceTree = "<group>"; };
 		39E8080C099DD5694B14CF4F77DBCA2D /* Pods-Shopping_Mall-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Shopping_Mall-Info.plist"; sourceTree = "<group>"; };
-		4A2DBD197BF8C4A95CF11BB10B92F671 /* iOSDropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iOSDropDown.swift; path = iOSDropDown/Classes/iOSDropDown.swift; sourceTree = "<group>"; };
-		562E1B0CB7AF0F74F35EBD9B634DF54D /* iOSDropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSDropDown-dummy.m"; sourceTree = "<group>"; };
+		4209A942B5126BFDE81A9C03AD3D0E87 /* FullScreenSlideshowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullScreenSlideshowViewController.swift; path = ImageSlideshow/Classes/Core/FullScreenSlideshowViewController.swift; sourceTree = "<group>"; };
+		459B491E8CF9A4277A1E6ED753982F2E /* iOSDropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.release.xcconfig; sourceTree = "<group>"; };
+		4AA63ED193B982B66CE306EAD9C8E28B /* iOSDropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-prefix.pch"; sourceTree = "<group>"; };
+		4C0A9E9FD03B6DF19E8479C2A29CD600 /* iOSDropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iOSDropDown-Info.plist"; sourceTree = "<group>"; };
+		57D19CED6777DA8CDD352F6A7B637C85 /* iOSDropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.debug.xcconfig; sourceTree = "<group>"; };
 		5D6FE3BA51D41CB64CAB2A9262EF9218 /* Pods-Shopping_Mall-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Shopping_Mall-acknowledgements.plist"; sourceTree = "<group>"; };
-		5FE3FAAF89E5C3D34984F3CC7E26E179 /* iOSDropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iOSDropDown-Info.plist"; sourceTree = "<group>"; };
+		72157F4B465DBA1D720DBF8658A32185 /* ImageSlideshowItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageSlideshowItem.swift; path = ImageSlideshow/Classes/Core/ImageSlideshowItem.swift; sourceTree = "<group>"; };
+		7D3CA1450FB844ABD553FC77D135B8D6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = ImageSlideshow/Classes/Core/ActivityIndicator.swift; sourceTree = "<group>"; };
+		86EEA136E5CBF415ED53A443F6EBF236 /* ImageSlideshow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ImageSlideshow.release.xcconfig; sourceTree = "<group>"; };
+		9133F5AB7F9CC1A7C04EF4DEF55A552F /* iOSDropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iOSDropDown.swift; path = iOSDropDown/Classes/iOSDropDown.swift; sourceTree = "<group>"; };
+		97AFC676A261B57F5DD5D5BA8E4A012B /* iOSDropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iOSDropDown.modulemap; sourceTree = "<group>"; };
+		989AE6807F9C7203643C12F04B2C696C /* ImageSlideshow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ImageSlideshow-dummy.m"; sourceTree = "<group>"; };
+		990CB6E66832F0585BDF167D3B45E4D5 /* ic_cross_white@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_cross_white@2x.png"; path = "ImageSlideshow/Assets/ic_cross_white@2x.png"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BF58B08E2E4F30F24A42E1F63F109E96 /* iOSDropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.release.xcconfig; sourceTree = "<group>"; };
+		A68912EBE98F56E14D5A4F744CA09F54 /* PageIndicatorPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageIndicatorPosition.swift; path = ImageSlideshow/Classes/Core/PageIndicatorPosition.swift; sourceTree = "<group>"; };
+		B9FFB92BAEAC84581318EBCC636E498D /* ImageSlideshow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ImageSlideshow.modulemap; sourceTree = "<group>"; };
+		BA2523065EC9B1A204D01DF18069BC6D /* UIImage+AspectFit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+AspectFit.swift"; path = "ImageSlideshow/Classes/Core/UIImage+AspectFit.swift"; sourceTree = "<group>"; };
+		BA4060DCFF45BBAF7F2505A219848564 /* UIImageView+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Tools.swift"; path = "ImageSlideshow/Classes/Core/UIImageView+Tools.swift"; sourceTree = "<group>"; };
+		BD25FA070A80CEF5F0CF1D09B471BED0 /* iOSDropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-umbrella.h"; sourceTree = "<group>"; };
+		C1D78A7F43807F49FDB5B04DD9BD6AC7 /* ImageSlideshow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ImageSlideshow.framework; path = ImageSlideshow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C56C7645DE28CE43FDEA838700298E17 /* Pods-Shopping_Mall-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Shopping_Mall-dummy.m"; sourceTree = "<group>"; };
-		C6A203E22246BADE78D1981895E516AA /* iOSDropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.debug.xcconfig; sourceTree = "<group>"; };
 		C7CC573E37D137178870B7EB328B7282 /* Pods_Shopping_Mall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Shopping_Mall.framework; path = "Pods-Shopping_Mall.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB15AE17636B2B0CE811B17F780DE8A3 /* Pods-Shopping_Mall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shopping_Mall.release.xcconfig"; sourceTree = "<group>"; };
+		CC3F6670C5C106282100B1A1F43F5E33 /* ic_cross_white@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_cross_white@3x.png"; path = "ImageSlideshow/Assets/ic_cross_white@3x.png"; sourceTree = "<group>"; };
+		CF20F8B21998D4EA59AAA09EAE3C2C1C /* ImageSlideshow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ImageSlideshow.debug.xcconfig; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		E394704805E5E41C40BC600EC788AF71 /* iOSDropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iOSDropDown.modulemap; sourceTree = "<group>"; };
+		DC2BA4E21748A62BC566B3708060C1B7 /* ZoomAnimatedTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZoomAnimatedTransitioning.swift; path = ImageSlideshow/Classes/Core/ZoomAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		E471CFEC8E6F6E2A6CC246261E299BF2 /* Pods-Shopping_Mall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shopping_Mall.debug.xcconfig"; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EE538A24A8CF66C97F592DF552F7CC46 /* ImageSlideshow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImageSlideshow-prefix.pch"; sourceTree = "<group>"; };
+		F4540E15D632DE60D1036822601B3C82 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = ImageSlideshow/Classes/Core/SwiftSupport.swift; sourceTree = "<group>"; };
 		F6576B97912214ACE2F40D0DE8FBAF6D /* Pods-Shopping_Mall-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Shopping_Mall-umbrella.h"; sourceTree = "<group>"; };
-		F7C0E7D451DF09B403F4E7B1E4343892 /* iOSDropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-prefix.pch"; sourceTree = "<group>"; };
+		F6E14BE006F94A58E977E07F8EE3AD55 /* iOSDropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSDropDown-dummy.m"; sourceTree = "<group>"; };
 		FCEEA8BBD9DA8D0CCE0A3092B20E3FA7 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iOSDropDown.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFF2117C12BA9C3728C67B37B9E8409 /* Pods-Shopping_Mall-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Shopping_Mall-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,24 +108,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE81C427DC3DECE5F8881AC12759C24F /* Frameworks */ = {
+		7E06CE943D32A4F746727C32B472177E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7C75C361A9F21800B7A9297948C1F30 /* Foundation.framework in Frameworks */,
+				B0E156222C736D564F32E80DFF538144 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6B97D862F199AB94B67D963F60E4A65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80A6FFAA7E911E0CA2C86C5A38322990 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13D1FCF4058A6AE88CD1C0BE1F7C50F0 /* Products */ = {
+		0C1C30E7854FBB6DC96B69A776E6E8EC /* iOSDropDown */ = {
 			isa = PBXGroup;
 			children = (
-				FCEEA8BBD9DA8D0CCE0A3092B20E3FA7 /* iOSDropDown.framework */,
-				C7CC573E37D137178870B7EB328B7282 /* Pods_Shopping_Mall.framework */,
+				9133F5AB7F9CC1A7C04EF4DEF55A552F /* iOSDropDown.swift */,
+				3D6E71BE05104FA6C30D84AA5BE38E9E /* Support Files */,
 			);
-			name = Products;
+			name = iOSDropDown;
+			path = iOSDropDown;
 			sourceTree = "<group>";
 		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
@@ -90,16 +145,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4304240AA3F97B8DA63732BED71C92CD /* Support Files */ = {
+		170C55404DC4E90A4C1F6C49ADB97DE4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E394704805E5E41C40BC600EC788AF71 /* iOSDropDown.modulemap */,
-				562E1B0CB7AF0F74F35EBD9B634DF54D /* iOSDropDown-dummy.m */,
-				5FE3FAAF89E5C3D34984F3CC7E26E179 /* iOSDropDown-Info.plist */,
-				F7C0E7D451DF09B403F4E7B1E4343892 /* iOSDropDown-prefix.pch */,
-				1A78BF6B03DED20C609704AE7C949C04 /* iOSDropDown-umbrella.h */,
-				C6A203E22246BADE78D1981895E516AA /* iOSDropDown.debug.xcconfig */,
-				BF58B08E2E4F30F24A42E1F63F109E96 /* iOSDropDown.release.xcconfig */,
+				990CB6E66832F0585BDF167D3B45E4D5 /* ic_cross_white@2x.png */,
+				CC3F6670C5C106282100B1A1F43F5E33 /* ic_cross_white@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1E1AB83FB2B93F8696EB1C812BEEB2D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB5CDFFD147B0D6118779D1038D17D2D /* ImageSlideshow */,
+				0C1C30E7854FBB6DC96B69A776E6E8EC /* iOSDropDown */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		22DE1A345DB79A0252E870273F64E660 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7D3CA1450FB844ABD553FC77D135B8D6 /* ActivityIndicator.swift */,
+				09C56DB429F7CDC83C70211AEAC623C3 /* Bundle+Module.swift */,
+				4209A942B5126BFDE81A9C03AD3D0E87 /* FullScreenSlideshowViewController.swift */,
+				04A080C7116926342DD2E1835DBDF817 /* ImageSlideshow.swift */,
+				72157F4B465DBA1D720DBF8658A32185 /* ImageSlideshowItem.swift */,
+				1E7F0C6448F2BDE27F60D328A53CEBDC /* InputSource.swift */,
+				1B07E2FE3E5AA29339602A376AC0C5FD /* PageIndicator.swift */,
+				A68912EBE98F56E14D5A4F744CA09F54 /* PageIndicatorPosition.swift */,
+				F4540E15D632DE60D1036822601B3C82 /* SwiftSupport.swift */,
+				BA2523065EC9B1A204D01DF18069BC6D /* UIImage+AspectFit.swift */,
+				BA4060DCFF45BBAF7F2505A219848564 /* UIImageView+Tools.swift */,
+				DC2BA4E21748A62BC566B3708060C1B7 /* ZoomAnimatedTransitioning.swift */,
+				170C55404DC4E90A4C1F6C49ADB97DE4 /* Resources */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		3D6E71BE05104FA6C30D84AA5BE38E9E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				97AFC676A261B57F5DD5D5BA8E4A012B /* iOSDropDown.modulemap */,
+				F6E14BE006F94A58E977E07F8EE3AD55 /* iOSDropDown-dummy.m */,
+				4C0A9E9FD03B6DF19E8479C2A29CD600 /* iOSDropDown-Info.plist */,
+				4AA63ED193B982B66CE306EAD9C8E28B /* iOSDropDown-prefix.pch */,
+				BD25FA070A80CEF5F0CF1D09B471BED0 /* iOSDropDown-umbrella.h */,
+				57D19CED6777DA8CDD352F6A7B637C85 /* iOSDropDown.debug.xcconfig */,
+				459B491E8CF9A4277A1E6ED753982F2E /* iOSDropDown.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/iOSDropDown";
@@ -122,22 +215,19 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		60E09F58A4B6EF1F34AC349248B764C0 /* Pods */ = {
+		AD5AB9FF764F5639953D5994112EBC66 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A3D57C222983B3ACBD29F20BAE9203E6 /* iOSDropDown */,
+				B9FFB92BAEAC84581318EBCC636E498D /* ImageSlideshow.modulemap */,
+				989AE6807F9C7203643C12F04B2C696C /* ImageSlideshow-dummy.m */,
+				05120410B0731C1C225AB99B52A4D3BC /* ImageSlideshow-Info.plist */,
+				EE538A24A8CF66C97F592DF552F7CC46 /* ImageSlideshow-prefix.pch */,
+				22E9E9D1435534CD7E6D1A4A979C8D8C /* ImageSlideshow-umbrella.h */,
+				CF20F8B21998D4EA59AAA09EAE3C2C1C /* ImageSlideshow.debug.xcconfig */,
+				86EEA136E5CBF415ED53A443F6EBF236 /* ImageSlideshow.release.xcconfig */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A3D57C222983B3ACBD29F20BAE9203E6 /* iOSDropDown */ = {
-			isa = PBXGroup;
-			children = (
-				4A2DBD197BF8C4A95CF11BB10B92F671 /* iOSDropDown.swift */,
-				4304240AA3F97B8DA63732BED71C92CD /* Support Files */,
-			);
-			name = iOSDropDown;
-			path = iOSDropDown;
+			name = "Support Files";
+			path = "../Target Support Files/ImageSlideshow";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -145,10 +235,20 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				60E09F58A4B6EF1F34AC349248B764C0 /* Pods */,
-				13D1FCF4058A6AE88CD1C0BE1F7C50F0 /* Products */,
+				1E1AB83FB2B93F8696EB1C812BEEB2D0 /* Pods */,
+				D8EFCDD1BE1A6100BE1421ACAE01BB45 /* Products */,
 				54A4F8E6C448C47FB015918699C65C2D /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D8EFCDD1BE1A6100BE1421ACAE01BB45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1D78A7F43807F49FDB5B04DD9BD6AC7 /* ImageSlideshow.framework */,
+				FCEEA8BBD9DA8D0CCE0A3092B20E3FA7 /* iOSDropDown.framework */,
+				C7CC573E37D137178870B7EB328B7282 /* Pods_Shopping_Mall.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		E0E06FFFCB45B78D788C3AA642D32AF9 /* Pods-Shopping_Mall */ = {
@@ -168,14 +268,32 @@
 			path = "Target Support Files/Pods-Shopping_Mall";
 			sourceTree = "<group>";
 		};
+		FB5CDFFD147B0D6118779D1038D17D2D /* ImageSlideshow */ = {
+			isa = PBXGroup;
+			children = (
+				22DE1A345DB79A0252E870273F64E660 /* Core */,
+				AD5AB9FF764F5639953D5994112EBC66 /* Support Files */,
+			);
+			name = ImageSlideshow;
+			path = ImageSlideshow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5DACAD942C3076C65CF0E1F2C119BC03 /* Headers */ = {
+		3F69F0548578DD20B7B7690352CB3ED5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDDE2A96135CA0747DE0063B3E798073 /* Pods-Shopping_Mall-umbrella.h in Headers */,
+				D9277DE99A99D0AFC8118B912636FEB3 /* Pods-Shopping_Mall-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB437CB1332AF0EAC333F02EFBAAEFE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B04CA28F483FD8C3CE24973E08CA3E81 /* ImageSlideshow-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,21 +328,40 @@
 		};
 		4CF209319E01B753959F7C68F8F495AC /* Pods-Shopping_Mall */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 70E01A47813A14E62249B8B85E20284A /* Build configuration list for PBXNativeTarget "Pods-Shopping_Mall" */;
+			buildConfigurationList = B446EA58527DF154F4E3332300A2BE54 /* Build configuration list for PBXNativeTarget "Pods-Shopping_Mall" */;
 			buildPhases = (
-				5DACAD942C3076C65CF0E1F2C119BC03 /* Headers */,
-				B472FD7578B7ABEFF5D6716E1F876F11 /* Sources */,
-				DE81C427DC3DECE5F8881AC12759C24F /* Frameworks */,
-				BB8107495D0EA3B094068AAB9DBE7C4F /* Resources */,
+				3F69F0548578DD20B7B7690352CB3ED5 /* Headers */,
+				CED64E491DFC73BDC03BE2EE658D6ACA /* Sources */,
+				B6B97D862F199AB94B67D963F60E4A65 /* Frameworks */,
+				4BD2EFFD75585FDDD6012842E4C30033 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				85C01F29DE79537E490047601D0ED842 /* PBXTargetDependency */,
+				6CCF9B080E8E460615E26756DB531C27 /* PBXTargetDependency */,
+				0CB3A5E32508D74AFDF00C9472441FE0 /* PBXTargetDependency */,
 			);
 			name = "Pods-Shopping_Mall";
 			productName = "Pods-Shopping_Mall";
 			productReference = C7CC573E37D137178870B7EB328B7282 /* Pods_Shopping_Mall.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B2F46A67275CC5973EE13076CD708247 /* ImageSlideshow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93DD8A7FF630EEE5B99241C9523F85C5 /* Build configuration list for PBXNativeTarget "ImageSlideshow" */;
+			buildPhases = (
+				5DB437CB1332AF0EAC333F02EFBAAEFE /* Headers */,
+				D71490E60DB530C4F748DD639111E407 /* Sources */,
+				7E06CE943D32A4F746727C32B472177E /* Frameworks */,
+				6BF70BFDEC578C5DBA5436052EF01455 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageSlideshow;
+			productName = ImageSlideshow;
+			productReference = C1D78A7F43807F49FDB5B04DD9BD6AC7 /* ImageSlideshow.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -245,10 +382,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 13D1FCF4058A6AE88CD1C0BE1F7C50F0 /* Products */;
+			productRefGroup = D8EFCDD1BE1A6100BE1421ACAE01BB45 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				B2F46A67275CC5973EE13076CD708247 /* ImageSlideshow */,
 				3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */,
 				4CF209319E01B753959F7C68F8F495AC /* Pods-Shopping_Mall */,
 			);
@@ -256,6 +394,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4BD2EFFD75585FDDD6012842E4C30033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F2761F0F0D962265232D9EE899A184E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,10 +408,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB8107495D0EA3B094068AAB9DBE7C4F /* Resources */ = {
+		6BF70BFDEC578C5DBA5436052EF01455 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953E65E792A8C765FD478A793399C3B4 /* ic_cross_white@2x.png in Resources */,
+				B0FBA1361925CA393897E7542FDEC2A8 /* ic_cross_white@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,29 +429,90 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B472FD7578B7ABEFF5D6716E1F876F11 /* Sources */ = {
+		CED64E491DFC73BDC03BE2EE658D6ACA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				476EE799F09C2CD393ED330AB1E4197C /* Pods-Shopping_Mall-dummy.m in Sources */,
+				EBE2E613F382FA1E12D589199C62A529 /* Pods-Shopping_Mall-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D71490E60DB530C4F748DD639111E407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				929851052C71A2D361EF36EA06000782 /* ActivityIndicator.swift in Sources */,
+				411493B2202223EBDA15B0262FEAAFAB /* Bundle+Module.swift in Sources */,
+				FCFA3362A8102C423357194A0467D6B6 /* FullScreenSlideshowViewController.swift in Sources */,
+				9B11D46D43CB163BF7E83DAE35868DA4 /* ImageSlideshow-dummy.m in Sources */,
+				F88D01943135AD10755532B87F59426D /* ImageSlideshow.swift in Sources */,
+				3FB533600F0CD6A1BB8CE8F7DE98294B /* ImageSlideshowItem.swift in Sources */,
+				80C9832ED9404C30CCBACE63EB8BE3C7 /* InputSource.swift in Sources */,
+				74F4CAAE11862825CE41B2BD48650DAC /* PageIndicator.swift in Sources */,
+				58941AA633F3E524EB2E3725630DD9BD /* PageIndicatorPosition.swift in Sources */,
+				DA31781C00F6AF610FC11B64C77EEC86 /* SwiftSupport.swift in Sources */,
+				CEAB378498A2FB2854FB35B044AA9045 /* UIImage+AspectFit.swift in Sources */,
+				FF9DB515D08214CD5C6E45E1F6D1D80D /* UIImageView+Tools.swift in Sources */,
+				4DB642303FD069BF6458764211FBAB91 /* ZoomAnimatedTransitioning.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		85C01F29DE79537E490047601D0ED842 /* PBXTargetDependency */ = {
+		0CB3A5E32508D74AFDF00C9472441FE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iOSDropDown;
 			target = 3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */;
-			targetProxy = C32AD9017DBED1DAAF1F2DE69BA775B4 /* PBXContainerItemProxy */;
+			targetProxy = 53C2407DD154F9473076A1D0E5DA8680 /* PBXContainerItemProxy */;
+		};
+		6CCF9B080E8E460615E26756DB531C27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ImageSlideshow;
+			target = B2F46A67275CC5973EE13076CD708247 /* ImageSlideshow */;
+			targetProxy = 8525439A847E81483C16432EC3D29B85 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1C02B687E0BD7DB6266DA9C4012D8A50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86EEA136E5CBF415ED53A443F6EBF236 /* ImageSlideshow.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ImageSlideshow/ImageSlideshow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ImageSlideshow/ImageSlideshow-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ImageSlideshow/ImageSlideshow.modulemap";
+				PRODUCT_MODULE_NAME = ImageSlideshow;
+				PRODUCT_NAME = ImageSlideshow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		33EE21E4239678779EFF21BFB3C5B37F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF58B08E2E4F30F24A42E1F63F109E96 /* iOSDropDown.release.xcconfig */;
+			baseConfigurationReference = 459B491E8CF9A4277A1E6ED753982F2E /* iOSDropDown.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -337,7 +545,75 @@
 			};
 			name = Release;
 		};
-		3C2843ADECE788FE7E235760C806D256 /* Release */ = {
+		40FA2EEBE2E55735938BB2FCBD83D35F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D19CED6777DA8CDD352F6A7B637C85 /* iOSDropDown.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDropDown/iOSDropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDropDown/iOSDropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/iOSDropDown/iOSDropDown.modulemap";
+				PRODUCT_MODULE_NAME = iOSDropDown;
+				PRODUCT_NAME = iOSDropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		94F8A6C1CCA7B2D7693CB970625BBF26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF20F8B21998D4EA59AAA09EAE3C2C1C /* ImageSlideshow.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ImageSlideshow/ImageSlideshow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ImageSlideshow/ImageSlideshow-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ImageSlideshow/ImageSlideshow.modulemap";
+				PRODUCT_MODULE_NAME = ImageSlideshow;
+				PRODUCT_NAME = ImageSlideshow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B34FED356E6F2BDC235B2CF403333DE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB15AE17636B2B0CE811B17F780DE8A3 /* Pods-Shopping_Mall.release.xcconfig */;
 			buildSettings = {
@@ -374,77 +650,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		3D296A2D2913B050A80823AACE35E2E2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E471CFEC8E6F6E2A6CC246261E299BF2 /* Pods-Shopping_Mall.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Shopping_Mall/Pods-Shopping_Mall-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Shopping_Mall/Pods-Shopping_Mall.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		40FA2EEBE2E55735938BB2FCBD83D35F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6A203E22246BADE78D1981895E516AA /* iOSDropDown.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/iOSDropDown/iOSDropDown-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iOSDropDown/iOSDropDown-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/iOSDropDown/iOSDropDown.modulemap";
-				PRODUCT_MODULE_NAME = iOSDropDown;
-				PRODUCT_NAME = iOSDropDown;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -574,6 +779,43 @@
 			};
 			name = Release;
 		};
+		E8FEEA84AA943E86BE7131B736E301DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E471CFEC8E6F6E2A6CC246261E299BF2 /* Pods-Shopping_Mall.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Shopping_Mall/Pods-Shopping_Mall-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Shopping_Mall/Pods-Shopping_Mall.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -586,11 +828,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		70E01A47813A14E62249B8B85E20284A /* Build configuration list for PBXNativeTarget "Pods-Shopping_Mall" */ = {
+		93DD8A7FF630EEE5B99241C9523F85C5 /* Build configuration list for PBXNativeTarget "ImageSlideshow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3D296A2D2913B050A80823AACE35E2E2 /* Debug */,
-				3C2843ADECE788FE7E235760C806D256 /* Release */,
+				94F8A6C1CCA7B2D7693CB970625BBF26 /* Debug */,
+				1C02B687E0BD7DB6266DA9C4012D8A50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -600,6 +842,15 @@
 			buildConfigurations = (
 				40FA2EEBE2E55735938BB2FCBD83D35F /* Debug */,
 				33EE21E4239678779EFF21BFB3C5B37F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B446EA58527DF154F4E3332300A2BE54 /* Build configuration list for PBXNativeTarget "Pods-Shopping_Mall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8FEEA84AA943E86BE7131B736E301DB /* Debug */,
+				B34FED356E6F2BDC235B2CF403333DE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

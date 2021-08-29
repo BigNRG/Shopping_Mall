@@ -48,7 +48,9 @@ class AddCategoriesTableVC: UITableViewController {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddSubCategoriesTableVC_ID") as! AddSubCategoriesTableVC
             vc.addSubcategoryTitle = self.addCategories[indexPath.row].category
             vc.addSubCategories = loadedAddSubCategories ?? []
-            print("CategoryID: ", self.addCategories[indexPath.row].id)
+            vc.selectedCagegoryID = self.addCategories[indexPath.row].id
+            print("Selected Category: ", self.addCategories[indexPath.row].category)
+            print("Selected CategoryID: ", self.addCategories[indexPath.row].id)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

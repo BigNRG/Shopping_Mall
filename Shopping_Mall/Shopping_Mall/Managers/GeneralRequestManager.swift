@@ -15,7 +15,6 @@ final class GeneralRequestManager: NSObject {
     static func loadMainPage(completion: @escaping (MainPage?) -> Void) {
         guard let requestUrl = URL(string: RequestManager.baseURL + MAIN_PAGE_URL) else {return}
         var request=URLRequest(url:requestUrl)
-        print("RequestURL: ",requestUrl)
         request.httpMethod = "GET"
         
         request.addValue("countryID", forHTTPHeaderField: "1")

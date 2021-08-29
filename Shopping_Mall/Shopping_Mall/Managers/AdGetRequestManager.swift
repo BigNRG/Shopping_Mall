@@ -38,7 +38,7 @@ final class AdGetRequestManager: NSObject {
     
     
     // MARK: - Get Sale
-    static func loadSales(pageNumber: Int, adCount: Int, subCategoryID: Int, completion: @escaping (GetSale?) -> Void) {
+    static func loadSales(pageNumber: Int, adCount: Int, subCategoryID: Int, completion: @escaping (GetSaleElements?) -> Void) {
         guard let url = URL(string: RequestManager.baseURL + GET_SALE_URL) else {return}
         var request=URLRequest(url:url)
         request.httpMethod = "POST"
@@ -66,7 +66,7 @@ final class AdGetRequestManager: NSObject {
             guard let data = data else {return}
             do{
                 print("Load Sales Response Status code: ",resp.statusCode)
-                let decodedData = try? JSONDecoder().decode(GetSale.self, from: data)
+                let decodedData = try? JSONDecoder().decode(GetSaleElements.self, from: data)
                 if let result = decodedData{
                     DispatchQueue.main.async {
                         completion(result)
@@ -75,12 +75,49 @@ final class AdGetRequestManager: NSObject {
                 } else {DispatchQueue.main.async {
                     completion(nil)
                 }
+
+                }
+            }
+        }.resume()
+    }
+
+    
+    static func loadSingleSale(id: Int, completion: @escaping (RealEstateElements?) -> Void) {
+        guard let url = URL(string: RequestManager.baseURL + GET_SALE_URL) else {return}
+        var request=URLRequest(url:url)
+        request.httpMethod = "POST"
+        request.addValue("culture", forHTTPHeaderField: "AM")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue(RequestManager.tempToken, forHTTPHeaderField: "Authorization")
+        let parameters = ["id": id,
+                          "pageNumber": nil,
+                          "adCount": nil,
+                          "subCategoryID": nil,
+                          ]
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {fatalError() }
+        request.httpBody = httpBody
+        URLSession.shared.dataTask(with: request) {data, response, error in
+            let resp = response as! HTTPURLResponse
+            guard let data = data else {return}
+            do{
+                print("Load Single Sales Response Status code: ",resp.statusCode)
+                let decodedData = try? JSONDecoder().decode(RealEstateElements.self, from: data)
+                if let result = decodedData{
+                    DispatchQueue.main.async {
+                        completion(result)
+                        print(result[0].id)
+                    }
+                } else { DispatchQueue.main.async {
+                    completion(nil)
+                }
                 
                 }
             }
         }.resume()
     }
-    static func loadSingleSale(id: Int, completion: @escaping (GetSale?) -> Void) {
+    
+    
+    static func loadGetSale(id: Int, completion: @escaping (RealEstateElements?) -> Void) {
         guard let url = URL(string: RequestManager.baseURL + GET_SALE_URL) else {return}
         var request=URLRequest(url:url)
         request.httpMethod = "POST"
@@ -108,7 +145,7 @@ final class AdGetRequestManager: NSObject {
             guard let data = data else {return}
             do{
                 print("Load Single Sales Response Status code: ",resp.statusCode)
-                let decodedData = try? JSONDecoder().decode(GetSale.self, from: data)
+                let decodedData = try? JSONDecoder().decode(RealEstateElements.self, from: data)
                 if let result = decodedData{
                     DispatchQueue.main.async {
                         completion(result)
@@ -122,6 +159,9 @@ final class AdGetRequestManager: NSObject {
             }
         }.resume()
     }
+    
+    
+    
     
     // MARK: - Get Work
     static func loadWork(pageNumber: Int, adCount: Int, subCategoryID: Int, completion: @escaping (GetWorkElements?) -> Void) {
@@ -223,17 +263,7 @@ final class AdGetRequestManager: NSObject {
         let parameters = ["id": nil,
                           "pageNumber": pageNumber,
                           "adCount": adCount,
-                          "subCategoryID": subCategoryID,
-                          "region": nil,
-                          "city": nil,
-                          "onlyWithPhotos": false,
-                          "aim": nil,
-                          "adOwner": nil,
-                          "currency": nil,
-                          "priceFrom": nil,
-                          "priceTo": nil,
-                          "productState": nil,
-                          "countryID": nil] as [String : Any?]
+                          "subCategoryID": subCategoryID] as [String : Any?]
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {fatalError() }
         request.httpBody = httpBody
         URLSession.shared.dataTask(with: request) {data, response, error in
@@ -272,8 +302,10 @@ final class AdGetRequestManager: NSObject {
                           "aim": nil,
                           "adOwner": nil,
                           "currency": nil,
-                          "priceFrom": nil,
-                          "priceTo": nil,
+                          "salePriceFrom": nil,
+                          "salePriceTo": nil,
+                          "salePercentTo": nil,
+                          "salePercentFrom": nil,
                           "productState": nil,
                           "countryID": nil] as [String : Any?]
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {fatalError() }
@@ -297,6 +329,7 @@ final class AdGetRequestManager: NSObject {
             }
         }.resume()
     }
+  
     
     // MARK: - Get EverythingElse
     static func loadEverythingElse(pageNumber: Int, adCount: Int, subCategoryID: Int, completion: @escaping (GetEverythingElseElements?) -> Void) {
@@ -995,7 +1028,7 @@ final class AdGetRequestManager: NSObject {
     
     
     // MARK: - Get Electronics
-    static func loadElectronics(pageNumber: Int, adCount: Int, subCategoryID: Int, completion: @escaping (ElectronicsElements?) -> Void) {
+    static func loadElectronics(pageNumber: Int, adCount: Int, subCategoryID: Int, completion: @escaping (GetElectronicsElements?) -> Void) {
         guard let url = URL(string: RequestManager.baseURL + GET_ELECTRONICS_URL) else {return}
         var request=URLRequest(url:url)
         request.httpMethod = "POST"
@@ -1023,7 +1056,7 @@ final class AdGetRequestManager: NSObject {
             guard let data = data else {return}
             do{
                 print("Load Electronics Response Status code: ",resp.statusCode)
-                let decodedData = try? JSONDecoder().decode(ElectronicsElements.self, from: data)
+                let decodedData = try? JSONDecoder().decode(GetElectronicsElements.self, from: data)
                 if let result = decodedData{
                     DispatchQueue.main.async {
                         completion(result)
@@ -1037,7 +1070,7 @@ final class AdGetRequestManager: NSObject {
             }
         }.resume()
     }
-    static func loadSingleElectronics(id: Int, completion: @escaping (ElectronicsElements?) -> Void) {
+    static func loadSingleElectronics(id: Int, completion: @escaping (GetElectronicsElements?) -> Void) {
         guard let url = URL(string: RequestManager.baseURL + GET_ELECTRONICS_URL) else {return}
         var request=URLRequest(url:url)
         request.httpMethod = "POST"
@@ -1065,7 +1098,7 @@ final class AdGetRequestManager: NSObject {
             guard let data = data else {return}
             do{
                 print("Load Single Electronics Response Status code: ",resp.statusCode)
-                let decodedData = try? JSONDecoder().decode(ElectronicsElements.self, from: data)
+                let decodedData = try? JSONDecoder().decode(GetElectronicsElements.self, from: data)
                 if let result = decodedData{
                     DispatchQueue.main.async {
                         completion(result)
@@ -1732,24 +1765,7 @@ final class AdGetRequestManager: NSObject {
         let parameters = ["id": nil,
                           "pageNumber": pageNumber,
                           "adCount": adCount,
-                          "subCategoryID": subCategoryID,
-                          "region": nil,
-                          "city": nil,
-                          "onlyWithPhotos": false,
-                          "aim": nil,
-                          "adOwner": nil,
-                          "currency": nil,
-                          "priceFrom": nil,
-                          "priceTo": nil,
-                          "productState": nil,
-                          "countryID": nil,
-                          "constructionType": nil,
-                          "paymentTime": nil,
-                          "rooms": nil,
-                          "spaceFrom": nil,
-                          "spaceTo": nil,
-                          "floorFrom": nil,
-                          "floorTo": nil] as [String : Any?]
+                          "subCategoryID": subCategoryID]
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {fatalError() }
         request.httpBody = httpBody
         URLSession.shared.dataTask(with: request) {data, response, error in
@@ -1805,12 +1821,14 @@ final class AdGetRequestManager: NSObject {
             let resp = response as! HTTPURLResponse
             guard let data = data else {return}
             do{
-                print("Load Single RealEstate Response Status code: ",resp.statusCode)
+                print("Load Single RealEstate Response Status code: PPPPPPPPPPPPPP",resp.statusCode)
                 let decodedData = try? JSONDecoder().decode(RealEstateElements.self, from: data)
                 if let result = decodedData{
                     DispatchQueue.main.async {
                         completion(result)
                         print(result[0].id)
+                        print("Load Single RealEstate Response Status code: +++++++++++++ ",resp.statusCode)
+
                     }
                 } else {DispatchQueue.main.async {
                     completion(nil)

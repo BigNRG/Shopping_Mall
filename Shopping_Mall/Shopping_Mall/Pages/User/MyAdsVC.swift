@@ -1,13 +1,13 @@
 //
-//  AddApplianceVC.swift
+//  MyAdsVC.swift
 //  Shopping_Mall
 //
-//  Created by Norayr Grigoryan on 6/23/21.
+//  Created by Harut on 05.07.21.
 //
 
 import UIKit
 
-class AddApplianceVC: UIViewController {
+class MyAdsVC: UIViewController,Storyborded {
 
     override func viewDidLoad() {
         super.viewDidLoad()

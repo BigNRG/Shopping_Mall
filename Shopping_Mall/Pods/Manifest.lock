@@ -1,16 +1,22 @@
 PODS:
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
   - iOSDropDown (0.3.4)
 
 DEPENDENCIES:
+  - ImageSlideshow (~> 1.9.0)
   - iOSDropDown
 
 SPEC REPOS:
   trunk:
+    - ImageSlideshow
     - iOSDropDown
 
 SPEC CHECKSUMS:
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
 
-PODFILE CHECKSUM: 1b2959a41290b697c1bfd30726c44943dd4a1b74
+PODFILE CHECKSUM: 11a516f5dda77690b467461abe09a5a45bc60a09
 
 COCOAPODS: 1.10.1

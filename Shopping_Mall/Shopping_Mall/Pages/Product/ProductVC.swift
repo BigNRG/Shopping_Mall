@@ -8,7 +8,7 @@
 import UIKit
 
 class ProductVC: UIViewController {
-    var loadedSingleSales = GetSale()
+    var loadedSingleSales = GetSaleElements()
 
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!

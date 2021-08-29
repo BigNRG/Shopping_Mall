@@ -8,6 +8,7 @@
 import UIKit
 
 class AddSubCategoriesTableVC: UITableViewController {
+    var selectedCagegoryID = 0
     var addSubcategoryTitle = ""
     var addSubCategories = [SubCategory]()
     override func viewDidLoad() {
@@ -48,8 +49,11 @@ class AddSubCategoriesTableVC: UITableViewController {
         AdGetRequestManager.loadSales(pageNumber: 1, adCount: 20, subCategoryID: 1) { loadedSalesData in
 //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddVC_ID") as! AddVC
 //            vc.loadedSales = loadedSalesData ?? []
-            let vc = self.storyboard?.instantiateViewController(identifier: "AddRealEstateVC_ID") as! AddRealEstateVC
-            print("SubCategoryID: ", self.addSubCategories[indexPath.row].id)
+            let vc = self.storyboard?.instantiateViewController(identifier: "AddVC_ID") as! AddVC
+            vc.selectedCagegoryID = self.selectedCagegoryID
+            vc.selectedSubCategoryID = self.addSubCategories[indexPath.row].id
+            print("Selected Subcategory: ", self.addSubCategories[indexPath.row].type)
+            print("Selected SubcategoryID: ", self.addSubCategories[indexPath.row].id)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

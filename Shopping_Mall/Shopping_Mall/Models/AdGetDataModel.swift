@@ -29,7 +29,7 @@ struct GetSaleElement: Codable {
     }
 }
 
-typealias GetSale = [GetSaleElement]
+typealias GetSaleElements = [GetSaleElement]
 
 
 // MARK: - GetWork
@@ -56,29 +56,30 @@ struct GetWorkElement: Codable {
 typealias GetWorkElements = [GetWorkElement]
 
 
-// MARK: - GetSport
+// MARK: - GetSportElement
 struct GetSportElement: Codable {
-    let paymentTime, id, userID, subCategoryID: Int
-    let currency, price, country, region: Int
-    let city, state: Int
+    let productState, id, userID, subCategoryID: Int
+    let currency, price, salePercent, salePrice: Int
+    let countryName, regionName, cityName: String
+    let country, region, city, state: Int
     let getSportElementDescription, name: String
     let locationLatitude, locationLongitude: Int
     let contact: String
-    let owner: Int
-    let comment: String
+    let aim, owner: Int
+    let comment: JSONNull?
     let view: Int
     let tags: String
+    let isRegional: Bool
     let imagesList: [String]
 
     enum CodingKeys: String, CodingKey {
-        case paymentTime, id, userID, subCategoryID, currency, price, country, region, city, state
+        case productState, id, userID, subCategoryID, currency, price, salePercent, salePrice, countryName, regionName, cityName, country, region, city, state
         case getSportElementDescription = "description"
-        case name, locationLatitude, locationLongitude, contact, owner, comment, view, tags, imagesList
+        case name, locationLatitude, locationLongitude, contact, aim, owner, comment, view, tags, isRegional, imagesList
     }
 }
 
 typealias GetSportElements = [GetSportElement]
-
 
 // MARK: - GetEverythingElse
 struct GetEverythingElseElement: Codable {
@@ -280,28 +281,30 @@ typealias ConstructionElements = [ConstructionElement]
 
 
 // MARK: - Electronics
-struct ElectronicsElement: Codable {
+struct GetElectronicsElement: Codable {
     let id, userID, subCategoryID, currency: Int
-    let price, country, region, city: Int
-    let state: Int
-    let electronicsElementDescription, name: String
+    let price, salePercent, salePrice: Int
+    let countryName, regionName, cityName: String
+    let country, region, city, state: Int
+    let getElectronicsElementDescription, name: String
     let locationLatitude, locationLongitude: Int
     let contact: String
-    let owner: Int
+    let aim, owner: Int
     let comment: String
     let view: Int
     let tags: String
+    let isRegional: Bool
     let imagesList: [String]
-    let aim, productState: Int
+    let productState: Int
 
     enum CodingKeys: String, CodingKey {
-        case id, userID, subCategoryID, currency, price, country, region, city, state
-        case electronicsElementDescription = "description"
-        case name, locationLatitude, locationLongitude, contact, owner, comment, view, tags, imagesList, aim, productState
+        case id, userID, subCategoryID, currency, price, salePercent, salePrice, countryName, regionName, cityName, country, region, city, state
+        case getElectronicsElementDescription = "description"
+        case name, locationLatitude, locationLongitude, contact, aim, owner, comment, view, tags, isRegional, imagesList, productState
     }
 }
 
-typealias ElectronicsElements = [ElectronicsElement]
+typealias GetElectronicsElements = [GetElectronicsElement]
 
 
 // MARK: - Acquaintance
@@ -489,27 +492,26 @@ typealias ProductsAndDrinksElements = [ProductsAndDrinksElement]
 
 // MARK: - RealEstate
 struct RealEstateElement: Codable {
-    let id, userID, subCategoryID, currency: Int
-    let price, country, region, city: Int
-    let state: Int
+    let space, constructionType, paymentTime, rooms: Int
+    let floor, id, userID, subCategoryID: Int
+    let currency, price, salePercent, salePrice: Int
+    let countryName, regionName, cityName: String
+    let country, region, city, state: Int
     let realEstateElementDescription, name: String
     let locationLatitude, locationLongitude: Int
     let contact: String
-    let owner: Int
-    let comment: String
+    let aim, owner: Int
     let view: Int
     let tags: String
+    let isRegional: Bool
     let imagesList: [String]
-    let aim, space, constructionType, paymentTime: Int
-    let rooms, floor: Int
 
     enum CodingKeys: String, CodingKey {
-        case id, userID, subCategoryID, currency, price, country, region, city, state
+        case space, constructionType, paymentTime, rooms, floor, id, userID, subCategoryID, currency, price, salePercent, salePrice, countryName, regionName, cityName, country, region, city, state
         case realEstateElementDescription = "description"
-        case name, locationLatitude, locationLongitude, contact, owner, comment, view, tags, imagesList, aim, space, constructionType, paymentTime, rooms, floor
+        case name, locationLatitude, locationLongitude, contact, aim, owner,  view, tags, isRegional, imagesList
     }
 }
-
 typealias RealEstateElements = [RealEstateElement]
 
 

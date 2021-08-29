@@ -9,8 +9,11 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
+    var loadedSport = GetSportElements()
     
-        let number = "094231323"
+    private var info: [(String, String)] = [] // by Artur
+    
+    static var number = ""
     
     
 //        cell 1
@@ -58,6 +61,8 @@ class TableViewCell: UITableViewCell {
         }
     }
     
+    @IBOutlet weak var heightSize: NSLayoutConstraint!
+    
     internal var aspectConstraint : NSLayoutConstraint? {
         didSet {
             if oldValue != nil {
@@ -80,6 +85,9 @@ class TableViewCell: UITableViewCell {
           super.awakeFromNib()
         tableView?.delegate = self
         tableView?.dataSource = self
+        
+        tableView?.separatorColor = .clear
+
           // Initialization code
 //          setUpTable()
       }
@@ -100,11 +108,15 @@ class TableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         aspectConstraint = nil
+        
+        TableViewCell.number = phoneNumber.title(for: .normal) ?? ""
+
+        
     }
     
     @IBAction func contactNumber(_ sender: UIButton) {
         
-        if let url = URL(string: "tel://\(number)"),
+        if let url = URL(string: "tel://\(loadedSport[0].contact)"),
            UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
@@ -124,19 +136,36 @@ class TableViewCell: UITableViewCell {
         img.image = image
     }
     
+    func setInfo(_ info: [(String, String)]) { //by Artur
+        self.info = info
+        info.map {$0.1}
+        info.map {$0.0}
+        
+        
+        self.tableView?.reloadData()
+        
+        //tableView height constraint
+        
+        heightSize?.constant = CGFloat(info.count * 30)
+
+        
+    }
+    
 }
 
 extension TableViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return info.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell_Inside
-        cell.label1.text = "index\(indexPath.row + 1)"
-        cell.label2.text = "barev"
+        cell.label1.text = info[indexPath.row].0 //"index\(indexPath.row + 1)"
+        cell.label2.text = info[indexPath.row].1 //"barev"
+        cell.selectionStyle = .none
+        
         return cell
     }
     
-    
+
 }

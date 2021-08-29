@@ -17,7 +17,6 @@ final class LocationRequestManager: NSObject {
     static func getCountry(culture: String, completion: @escaping (Country?) -> Void) {
         guard let requestUrl = URL(string: RequestManager.baseURL + GET_COUNTRY_URL) else {return}
         var request=URLRequest(url:requestUrl)
-        print("GetCountry RequestURL: ",requestUrl)
         request.httpMethod = RequestManager.httpMethod
         
         request.addValue(culture, forHTTPHeaderField: "culture")
@@ -32,7 +31,7 @@ final class LocationRequestManager: NSObject {
                 if let result = decodedData{
                     DispatchQueue.main.async {
                         completion(result)
-                        print("Country Count", result.count)
+                        print("Loaded Country Count: ", result.count)
                     }
                 } else {DispatchQueue.main.async {
                     completion(nil)
